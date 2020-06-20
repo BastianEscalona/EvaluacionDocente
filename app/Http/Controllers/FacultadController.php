@@ -39,7 +39,10 @@ class FacultadController extends Controller
     {
         //
 
-        $datosFacultad=request()->all();
+        //$datosFacultad=request()->all();
+        $datosFacultad=request()->except('_token');
+
+        Facultad::insert($datosFacultad);
 
         return response()->json($datosFacultad);
 
