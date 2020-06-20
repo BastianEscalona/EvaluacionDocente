@@ -15,7 +15,10 @@ class FacultadController extends Controller
     public function index()
     {
         //
-        return view('Facultad.index');
+        $datos['Facultad']=Facultad::paginate(5);
+
+
+        return view('Facultad.index',$datos);
     }
 
     /**
