@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\Http",
+    "\\app\\Http\\Controllers",
+    "\\database",
+    "\\database\\migrations",
+    "\\routes"
+  ],
+  "SelectedNode": "\\database\\migrations\\2020_06_20_031150_create_usuarios_table.php",
+  "PreviewInSolutionExplorer": false
+}
