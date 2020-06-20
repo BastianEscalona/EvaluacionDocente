@@ -47,7 +47,7 @@ class FacultadController extends Controller
 
         Facultad::insert($datosFacultad);
 
-        return redirect('Facultad');
+        return redirect('Facultad')->with('Mensaje','Facultad Agregada con exito');
 
 
     }
@@ -93,7 +93,7 @@ class FacultadController extends Controller
        
         $Facultad= Facultad::findOrFail($id);   //Devuelve toda la informacion del id
 
-        return view('Facultad.editar',compact('Facultad'));
+        return redirect('Facultad')->with('Mensaje','Facultad Modificado con exito');
     }
 
     /**
@@ -106,6 +106,6 @@ class FacultadController extends Controller
     {
         //
         Facultad::destroy($id);
-        return redirect('Facultad');
+        return redirect('Facultad')->with('Mensaje','Facultad Eliminada');
     }
 }

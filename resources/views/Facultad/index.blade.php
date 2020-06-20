@@ -1,5 +1,7 @@
-hola asdasd qweqweqwe
-
+@if(Session::has('Mensaje')){{
+    Session::get('Mensaje')
+}}
+@endif
 <a href ="{{url('Facultad/create')}}"> Agregar Facultad </a>
 
 <table class="table table-light">
