@@ -7,4 +7,6 @@
 <br/>
 <input type="submit" value= "Agregar">
 
+<a href ="{{url('Facultad')}}"> Regresar </a>
+
 </form>

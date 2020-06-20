@@ -1,5 +1,7 @@
 hola asdasd qweqweqwe
 
+<a href ="{{url('Facultad/create')}}"> Agregar Facultad </a>
+
 <table class="table table-light">
     <thead class="thead-light">
         <tr>
@@ -15,7 +17,12 @@ hola asdasd qweqweqwe
             <td>{{$loop->iteration}}</td>
             <td>{{$Facultad->Nombre}} </td>
             
-            <td>Editar | 
+            <td>
+            
+            <a href="{{ url('/Facultad/'.$Facultad->id.'/edit') }}">
+            Editar
+            </a>
+             | 
             
             <form method="post" action="{{url('/Facultad/'.$Facultad->id) }}">
             {{ csrf_field() }}

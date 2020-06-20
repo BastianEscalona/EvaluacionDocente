@@ -47,7 +47,7 @@ class FacultadController extends Controller
 
         Facultad::insert($datosFacultad);
 
-        return response()->json($datosFacultad);
+        return redirect('Facultad');
 
 
     }
@@ -69,9 +69,12 @@ class FacultadController extends Controller
      * @param  \App\Facultad  $facultad
      * @return \Illuminate\Http\Response
      */
-    public function edit(Facultad $facultad)
+    public function edit($id)
     {
         //
+        $Facultad= Facultad::findOrFail($id);   //Devuelve toda la informacion del id
+
+        return view('Facultad.editar',compact('Facultad'));
     }
 
     /**
@@ -81,9 +84,16 @@ class FacultadController extends Controller
      * @param  \App\Facultad  $facultad
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Facultad $facultad)
+    public function update(Request $request, $id)
     {
         //
+        $datosFacultad=request()->except(['_token','_method']);
+
+        Facultad::where('id','=',$id)->update($datosFacultad);
+       
+        $Facultad= Facultad::findOrFail($id);   //Devuelve toda la informacion del id
+
+        return view('Facultad.editar',compact('Facultad'));
     }
 
     /**
