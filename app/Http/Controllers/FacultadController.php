@@ -92,8 +92,10 @@ class FacultadController extends Controller
      * @param  \App\Facultad  $facultad
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Facultad $facultad)
+    public function destroy($id)
     {
         //
+        Facultad::destroy($id);
+        return redirect('Facultad');
     }
 }
