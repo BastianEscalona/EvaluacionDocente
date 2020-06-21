@@ -1,4 +1,9 @@
 <script src="https://kit.fontawesome.com/eccfd43738.js" crossorigin="anonymous"></script>
+<style>
+    .justify-content-center nav ul{
+        justify-content: center !important;
+    }
+ </style>
 
 @extends('layouts.app')
 
@@ -21,37 +26,49 @@
 
 </br>
 </br>
-<table class="table table-light table-hover">
-    <thead class="thead-light">
-        <tr>
-            <th># </th>
-            <th>Nombre de Facultad</th>
-            <th>Acciones </th>
-        </tr>
-    </thead>
+<div class="row">
+    <div class="col-12 table-responsive">
+        <table class="table table-light table-hover">
+            <thead class="thead-light">
+                <tr>
+                    <th># </th>
+                    <th>Nombre de Facultad</th>
+                    <th>Acciones </th>
+                </tr>
+            </thead>
 
-    <tbody>
-    @foreach($Facultad as $Facultad)
-        <tr>
-            <td>{{$loop->iteration}}</td>
-            <td>{{$Facultad->Nombre}} </td>
-            
-            <td>
+            <tbody>
+            @foreach($Facultad as $fac)
+                <tr>
+                    <td>{{$loop->iteration}}</td>
+                    <td>{{$fac->Nombre}} </td>
+                    
+                    <td>
 
-   
-            <a class="btn btn-link" href="{{ url('/Facultad/'.$Facultad->id.'/edit') }}" > <i class="fas fa-pencil-alt" style="font-size: 24px;" > </i>  </a>      
-            <form method="post" action="{{url('/Facultad/'.$Facultad->id) }}" style="display:inline">
-            {{ csrf_field() }}
-            {{method_field('DELETE')}}    
-            <button class="btn btn-link" type="submit" onclick="return confirm('Esta Seguro de Borrar?');" ><i class="fas fa-trash-alt" style="font-size: 24px;color:red" ></i>  </button>
-            </form>
+        
+                    <a class="btn btn-link" href="{{ url('/Facultad/'.$fac->id.'/edit') }}" > <i class="fas fa-pencil-alt" style="font-size: 24px;" > </i>  </a>      
+                    <form method="post" action="{{url('/Facultad/'.$fac->id) }}" style="display:inline">
+                    {{ csrf_field() }}
+                    {{method_field('DELETE')}}    
+                    <button class="btn btn-link" type="submit" onclick="return confirm('Esta Seguro de Borrar?');" ><i class="fas fa-trash-alt" style="font-size: 24px;color:red" ></i>  </button>
+                    </form>
 
-             </td>
-        </tr>
-    @endforeach
-    </tbody>
+                    </td>
+                </tr>
+            @endforeach
+            </tbody>
 
-</table>
+
+        </table>
+    </div>
+    <div class="col-12 mx-auto" align="center">
+        <div class="justify-content-center">
+        {{ $Facultad->links() }}
+    </div>
+    </div>
+</div>
+
+
 
 </div>
 @endsection
