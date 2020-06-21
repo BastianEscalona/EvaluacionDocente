@@ -6,9 +6,14 @@
 
 <div class="container">
 
-@if(Session::has('Mensaje')){{
-    Session::get('Mensaje')
+@if(Session::has('Mensaje'))
+
+    <div class="alert alert-success" role="alert">
+           {{ Session::get('Mensaje')
 }}
+    </div>
+
+
 @endif
 
 <a class="btn btn-success" href ="{{url('Facultad/create')}}" > <i class="fas fa-user-plus" style="font-size: 24px;" ></i>   </a> 
@@ -47,5 +52,6 @@
     </tbody>
 
 </table>
+
 </div>
 @endsection
