@@ -1,3 +1,9 @@
+@extends('layouts.app')
+
+@section('content')
+
+<div class="container">
+
 <form method="post" action="{{url('/Facultad/'.$Facultad->id)}}" enctype = "multipart/form-data">
 {{ csrf_field()}}
 {{ method_field('PATCH')}}
@@ -13,3 +19,5 @@
 
 </form>
 
+</div>
+@endsection

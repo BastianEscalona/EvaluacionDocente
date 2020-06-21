@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 //Rutas para facultad
@@ -30,6 +30,6 @@ Route::get('/facultad', function () {
 });
 */
 //------------------------------------------------------------
-Auth::routes();
+Auth::routes(['reset'=>false]);
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -1,3 +1,10 @@
+<script src="https://kit.fontawesome.com/eccfd43738.js" crossorigin="anonymous"></script>
+
+@extends('layouts.app')
+
+@section('content')
+
+<div class="container">
 
 <form action="{{ url('/Facultad')}}" method="post" enctype="multipart/form-data">
 {{ csrf_field() }}
@@ -8,8 +15,11 @@
 <br/>
 <input type="submit" value= "Agregar">
 
-<a href ="{{url('Facultad')}}"> Regresar </a>
 
+<a href ="{{url('Facultad')}}" class="dashicons dashicons-undo"> Regresar </a>
 
 
 </form>
+
+</div>
+@endsection
