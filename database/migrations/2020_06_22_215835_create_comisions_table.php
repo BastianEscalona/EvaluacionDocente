@@ -15,6 +15,7 @@ class CreateComisionsTable extends Migration
     {
         Schema::create('comisions', function (Blueprint $table) {
             $table->id();
+            $table->string('Nombre');
             $table->timestamps();
         });
     }

@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+
 class CreateAcademicosTable extends Migration
 {
     /**
@@ -23,7 +24,7 @@ class CreateAcademicosTable extends Migration
             $table->string('nombre');
             $table->string('apellido');
             $table->string('email');
-            $table->boolean('estado');
+            $table->softDeletes();
             $table->unsignedBigInteger('departamento_id');
             $table->timestamps();
             $table->foreign('departamento_id')
