@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Departamento;
 use Illuminate\Http\Request;
+use App\Facultad;
 
 class DepartamentoController extends Controller
 {
@@ -14,7 +15,9 @@ class DepartamentoController extends Controller
      */
     public function index()
     {
-        //
+        $departamentos = Departamento::all();
+        $facultads = Facultad::all();
+        return view('Departamento.index', compact('departamentos', 'facultads'));
     }
 
     /**
@@ -24,7 +27,8 @@ class DepartamentoController extends Controller
      */
     public function create()
     {
-        //
+        $facultads = Facultad::all();
+        return view('Departamento.crear', compact('facultads'));
     }
 
     /**
@@ -35,7 +39,11 @@ class DepartamentoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $departamento = new Departamento;
+        $departamento->nombre = request('nombre');
+        $departamento->facultad_id = request('facultad_id');
+        $departamento->save();
+        return redirect('Departamento')->with('Mensaje','Departamento Agregado con exito');
     }
 
     /**
@@ -55,9 +63,11 @@ class DepartamentoController extends Controller
      * @param  \App\Departamento  $departamento
      * @return \Illuminate\Http\Response
      */
-    public function edit(Departamento $departamento)
+    public function edit($id)
     {
-        //
+        $facultads = Facultad::all();
+        $departamento = Departamento::find($id);
+        return view('Departamento.editar', compact('departamento', 'facultads'));
     }
 
     /**
@@ -67,9 +77,13 @@ class DepartamentoController extends Controller
      * @param  \App\Departamento  $departamento
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Departamento $departamento)
+    public function update(Request $request, $id)
     {
-        //
+        $departamento = Departamento::find($id);
+        $departamento->nombre = request('nombre');
+        $departamento->facultad_id = request('facultad_id');
+        $departamento->save();
+        return redirect('Departamento')->with('Mensaje','Departamento Modificado con exito');
     }
 
     /**
@@ -78,8 +92,11 @@ class DepartamentoController extends Controller
      * @param  \App\Departamento  $departamento
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Departamento $departamento)
+    public function destroy( $id)
     {
-        //
+        $departamento = Departamento::findOrfail($id);
+        $departamento -> delete();
+
+        return redirect('Departamento')->with('Mensaje','Departamento Eliminado');
     }
 }

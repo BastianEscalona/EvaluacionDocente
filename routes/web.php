@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 
 Route::resource('Facultad', 'FacultadController');
+Route::resource('Departamento', 'DepartamentoController');
 
 /* Route::get('/facultad/editar', function () {
     return view('Facultad.editar');
