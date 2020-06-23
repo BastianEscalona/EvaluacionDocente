@@ -42,7 +42,7 @@
                 @endforeach
                 </td>
                 <td>
-                    <a class="btn btn-link" href="{{ url('/Deparmento/'.$departamento->id.'/edit') }}" > <i class="fas fa-pencil-alt" style="font-size: 24px;" > </i>  </a>
+                    <a class="btn btn-link" href="{{ url('/Departamento/'.$departamento->id.'/edit') }}" > <i class="fas fa-pencil-alt" style="font-size: 24px;" > </i>  </a>
                 
                     <form method="POST" action="/Departamento/{{$departamento->id}}" style="display:inline">
                         {{ csrf_field() }}

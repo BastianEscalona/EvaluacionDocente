@@ -15,7 +15,7 @@ class FacultadController extends Controller
     public function index(Request $request)
     {
         //
-        $request->user()->authorizeRoles(['admin']);
+        $request->user()->authorizeRoles(['admin','secre']);
 
         $datos['Facultad'] = Facultad::paginate(5);
         
