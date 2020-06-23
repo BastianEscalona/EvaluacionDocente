@@ -33,6 +33,7 @@
                 <tr>
                     <th># </th>
                     <th>Nombre de Facultad</th>
+                    <th>Nombre Decano</th>
                     <th>Acciones </th>
                 </tr>
             </thead>
@@ -42,6 +43,7 @@
                 <tr>
                     <td>{{$loop->iteration}}</td>
                     <td>{{$fac->Nombre}} </td>
+                    <td>{{$fac->NombreDecano}} </td>
                     
                     <td>
 

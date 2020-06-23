@@ -17,7 +17,8 @@
 @endif
 
 <a class="btn btn-success" href ="{{url('Departamento/create')}}" > <i class="fas fa-user-plus" style="font-size: 24px;" ></i>   </a> 
-
+</br>
+</br>
 <div class="row">
     <div class="col-12 table-responsive">
         <table class="table table-light table-hover">

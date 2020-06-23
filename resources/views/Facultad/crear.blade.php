@@ -23,6 +23,10 @@
                     <label for="Nombre" class="control-label" > {{'Nombre de la Facultad'}}</label>
                     <input type="text" class="form-control" name="Nombre" id="Nombre" value="" required>  
                   </div>
+                    <div class="form-group">
+                    <label for="NombreDecano" class="control-label" > {{'Nombre del Decano'}}</label>
+                    <input type="text" class="form-control" name="NombreDecano" id="NombreDecano" value="" required>  
+                  </div>
                 </th>
                 </tr>
                                                 
