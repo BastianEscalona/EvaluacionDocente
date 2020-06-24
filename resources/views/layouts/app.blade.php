@@ -43,6 +43,9 @@
                         <li class="nav-item">
                                <a class="nav-link" href="{{ route('Departamento.index') }}">{{ __('Departamento') }}</a>
                         </li>
+                        <li class="nav-item">
+                               <a class="nav-link" href="{{ route('Academico.index') }}">{{ __('Academico') }}</a>
+                        </li>
                                                         
                     </ul>
                     <ul class="navbar-nav mr-auto">

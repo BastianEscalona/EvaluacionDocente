@@ -16,7 +16,7 @@
     </div>
 @endif
 
-<a class="btn btn-success" href ="{{url('Departamento/create')}}" > <i class="fas fa-user-plus" style="font-size: 24px;" ></i>   </a> 
+<a class="btn btn-success" href ="{{url('Academico/create')}}" > <i class="fas fa-user-plus" style="font-size: 24px;" ></i>   </a> 
 </br>
 </br>
 <div class="row">
@@ -25,27 +25,41 @@
             <thead class="thead-light">
                 <tr>
                     <th># </th>
-                    <th>Nombre de Deparmento</th>
-                    <th>Nombre de Facultad </th>
+                    <th>Rut Academico</th>
+                    <th>Nombre Completo </th>
+                    <th>email </th>
+                    <th>Titulo </th>
+                    <th>Grado Academico </th>
+                    <th>Categoria </th>
+                    <th>Horas de Contrato </th>
+                    <th>Estado </th>
+                    <th>Departamento</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
 
             <tbody>
-            @foreach ($departamentos as $departamento)
+            @foreach ($academicos as $academico)
             <tr>
                 <td>{{$loop->iteration}}</td>
-                <td>{{$departamento->nombre}}</td>
-                <td> @foreach ($facultads as $facultad)
-                    @if ($departamento->facultad_id == $facultad->id)
-                        {{$facultad->Nombre}}
+                <td>{{$academico->rut}}</td>
+                <td>{{$academico->nombre}} {{$academico->apellido}} </td>
+                <td>{{$academico->email}}</td>
+                <td>{{$academico->titulo}}</td>
+                <td>{{$academico->gradoAcademico}}</td>
+                <td>{{$academico->categoria}}</td>
+                <td>{{$academico->HorasContrato}}</td>
+                <td>{{$academico->estado}}</td>
+                <td> @foreach ($departamentos as $departamento)
+                    @if ($academico->departamento_id == $departamento->id)
+                        {{$departamento->nombre}}
                     @endif
                 @endforeach
                 </td>
                 <td>
-                    <a class="btn btn-link" href="{{ url('/Departamento/'.$departamento->id.'/edit') }}" > <i class="fas fa-pencil-alt" style="font-size: 24px;" > </i>  </a>
+                    <a class="btn btn-link" href="{{ url('/Academico/'.$academico->id.'/edit') }}" > <i class="fas fa-pencil-alt" style="font-size: 24px;" > </i>  </a>
                 
-                    <form method="POST" action="/Departamento/{{$departamento->id}}" style="display:inline">
+                    <form method="POST" action="/Academico/{{$academico->id}}" style="display:inline">
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
                     <button class="btn btn-link" type="submit" onclick="return confirm('Esta Seguro de Borrar?');" ><i class="fas fa-trash-alt" style="font-size: 24px;color:red" ></i>  </button>
@@ -60,11 +74,10 @@
     </div>
     <div class="col-12 mx-auto" align="center">
         <div class="justify-content-center">
-        {{ $departamentos->links() }}
+        {{ $academicos->links() }}
     </div>
     </div>
 </div>
 
 </div>
 @endsection
-

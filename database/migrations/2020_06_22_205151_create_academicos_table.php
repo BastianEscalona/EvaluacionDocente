@@ -24,7 +24,7 @@ class CreateAcademicosTable extends Migration
             $table->string('nombre');
             $table->string('apellido');
             $table->string('email');
-            $table->softDeletes();
+            $table->boolean('estado');
             $table->unsignedBigInteger('departamento_id');
             $table->timestamps();
             $table->foreign('departamento_id')

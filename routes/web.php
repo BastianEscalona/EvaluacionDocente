@@ -22,6 +22,7 @@ Route::get('/', function () {
 
 Route::resource('Facultad', 'FacultadController');
 Route::resource('Departamento', 'DepartamentoController');
+Route::resource('Academico', 'AcademicoController');
 
 /* Route::get('/facultad/editar', function () {
     return view('Facultad.editar');
