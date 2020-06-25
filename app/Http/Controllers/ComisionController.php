@@ -50,44 +50,43 @@ class ComisionController extends Controller
      *
      * @param  \App\Comision  $comision
      * @return \Illuminate\Http\Response
-     *
-   * public function show(Comision $comision)
-    *{
-     *   //
-    *}
+     */
+    public function show(Comision $comision)
+    {
+        //
+    }
 
-    */ /**
+    /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Comision  $comision
      * @return \Illuminate\Http\Response
-     *
-    * public function edit(Comision $comision)
-    *{
-     *   //
-    * }
+     */
+    public function edit(Comision $comision)
+    {
+        //
+    }
 
-    *
+    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Comision  $comision
      * @return \Illuminate\Http\Response
-     *
-    *public function update(Request $request, Comision $comision)
-    *{
-     *   //
-    *}
+     */
+    public function update(Request $request, Comision $comision)
+    {
+        //
+    }
 
-    *
+    /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Comision  $comision
      * @return \Illuminate\Http\Response
-     *
-    *public function destroy(Comision $comision)
-    *{
-     * 
-    *}
-*}
-*/
+     */
+    public function destroy(Comision $comision)
+    {
+        //
+    }
+}
