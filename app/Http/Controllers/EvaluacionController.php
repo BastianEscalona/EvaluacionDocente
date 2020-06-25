@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Evaluacion;
 use Illuminate\Http\Request;
+use App\Departamento;
 
 class EvaluacionController extends Controller
 {
@@ -14,7 +15,10 @@ class EvaluacionController extends Controller
      */
     public function index()
     {
-        //
+        $evaluaciones = Evaluacion::all();
+        $evaluaciones = Evaluacion::paginate(5);
+        $departamentos = Departamento::all();
+        return view('Evaluacion.index', compact('evaluaciones', 'departamentos'));
     }
 
     /**
@@ -24,7 +28,8 @@ class EvaluacionController extends Controller
      */
     public function create()
     {
-        //
+        $departamentos = Departamento::all();
+        return view('Academico.crear', compact('departamentos'));
     }
 
     /**
@@ -35,7 +40,8 @@ class EvaluacionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $evaluaciones = new Evaluacion;
+        
     }
 
     /**

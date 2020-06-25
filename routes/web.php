@@ -23,6 +23,8 @@ Route::get('/', function () {
 Route::resource('Facultad', 'FacultadController');
 Route::resource('Departamento', 'DepartamentoController');
 Route::resource('Academico', 'AcademicoController');
+Route::resource('Evaluacion', 'EvaluacionController');
+
 
 /* Route::get('/facultad/editar', function () {
     return view('Facultad.editar');
