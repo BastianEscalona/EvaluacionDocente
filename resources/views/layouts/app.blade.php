@@ -47,6 +47,10 @@
                                <a class="nav-link" href="{{ route('Academico.index') }}">{{ __('Academico') }}</a>
                         </li>
                         <li class="nav-item">
+
+                         <li class="nav-item">
+                               <a class="nav-link" href="{{ route('Comision.index') }}">{{ __('Comision') }}</a>
+                        </li>
                                <a class="nav-link" href="{{ route('Evaluacion.index') }}">{{ __('Evaluacion') }}</a>
                         </li>
                                                         

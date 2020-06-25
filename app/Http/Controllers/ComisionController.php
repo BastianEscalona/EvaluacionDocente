@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Comision;
 use Illuminate\Http\Request;
-
+use App\Academico;
 class ComisionController extends Controller
 {
     /**
@@ -15,6 +15,10 @@ class ComisionController extends Controller
     public function index()
     {
         //
+        $comisiones = Comision::all();
+        $comisiones = Comision::paginate(5);
+        $academicos = Academico::all();
+        return view('Comision.index', compact('comisiones', 'academicos'));
     }
 
     /**
@@ -25,6 +29,8 @@ class ComisionController extends Controller
     public function create()
     {
         //
+        $academicos = Academico::all();
+        return view('Academico.crear', compact('departamentos'));
     }
 
     /**
@@ -36,6 +42,7 @@ class ComisionController extends Controller
     public function store(Request $request)
     {
         //
+        $comisiones = new Comision;
     }
 
     /**
@@ -43,43 +50,44 @@ class ComisionController extends Controller
      *
      * @param  \App\Comision  $comision
      * @return \Illuminate\Http\Response
-     */
-    public function show(Comision $comision)
-    {
-        //
-    }
+     *
+   * public function show(Comision $comision)
+    *{
+     *   //
+    *}
 
-    /**
+    */ /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Comision  $comision
      * @return \Illuminate\Http\Response
-     */
-    public function edit(Comision $comision)
-    {
-        //
-    }
+     *
+    * public function edit(Comision $comision)
+    *{
+     *   //
+    * }
 
-    /**
+    *
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Comision  $comision
      * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Comision $comision)
-    {
-        //
-    }
+     *
+    *public function update(Request $request, Comision $comision)
+    *{
+     *   //
+    *}
 
-    /**
+    *
      * Remove the specified resource from storage.
      *
      * @param  \App\Comision  $comision
      * @return \Illuminate\Http\Response
-     */
-    public function destroy(Comision $comision)
-    {
-        //
-    }
-}
+     *
+    *public function destroy(Comision $comision)
+    *{
+     * 
+    *}
+*}
+*/
