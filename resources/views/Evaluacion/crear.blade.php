@@ -162,8 +162,8 @@
 
       <tr>
         <td colspan="3">Calificacion Final</td>
-        <td></td>
-        <td> <input type="number" name="notafinal" disabled id="notafinal" step=0.1 ></td>
+        <td><label for="" id="escalafinal"></label></td>
+        <td> <input type="number" name="notafinal" disabled id="notafinal" step=0.01 onchange="valorEscala();" ></td>
       </tr>
       
       </table>
@@ -228,10 +228,13 @@ function pon(pos){
 
   var resul = t*nota;
   resul /= 100;
-  resul = resul.toFixed(1);
+  resul = resul.toFixed(2);
+
 
   document.getElementById(Strin_resul).value = resul;
-}
+};
+
+
 
 function notaFinal(){
   var pon1 = parseFloat(document.getElementById('resu1').value);
@@ -241,8 +244,35 @@ function notaFinal(){
   var pon5 = parseFloat(document.getElementById('resu5').value);
 
   var notafinal = pon1 + pon2 + pon3 + pon4 + pon5;
-  document.getElementById('notafinal').value = notafinal.toFixed(1);
-}
+  notafinal = notafinal.toFixed(2);
+  document.getElementById('notafinal').value = notafinal;
 
+  
+  document.querySelector('#escalafinal').innerText = valorEscala(notafinal);;
+};
+
+
+</script>
+
+<script>
+  function valorEscala(valor){
+  var escala = "";
+  console.log(valor);
+  if (valor < 2.7){
+    escala = "DEFICIENTE";
+  }else if (valor < 3.4){
+    escala = "REGULAR";
+  }else if (valor < 3.9){
+    escala = "BUENO";
+  }else if (valor < 4.4){
+    escala = "MUY BUENO";
+  }else{ 
+    escala = "EXCELENTE";
+  }
+  
+  return escala;
+  console.log(escala);
+
+};
 </script>
 @endsection
