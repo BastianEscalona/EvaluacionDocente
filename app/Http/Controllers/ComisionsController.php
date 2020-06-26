@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Comision;
+use App\Comisions;
 use Illuminate\Http\Request;
 use App\Academico;
-class ComisionController extends Controller
+class ComisionsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +15,10 @@ class ComisionController extends Controller
     public function index()
     {
         //
-        $comisiones = Comision::all();
-        $comisiones = Comision::paginate(5);
+        $comisions = Comisions::all();
+        $comisions = Comisions::paginate(5);
         $academicos = Academico::all();
-        return view('Comision.index', compact('comisiones', 'academicos'));
+        return view('comisions.index', compact('comisions'));
     }
 
     /**
