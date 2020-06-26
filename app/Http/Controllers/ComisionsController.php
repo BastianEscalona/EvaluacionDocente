@@ -49,7 +49,7 @@ class ComisionsController extends Controller
      * @param  \App\Comision  $comision
      * @return \Illuminate\Http\Response
      */
-    public function show(Comisions $comision)
+    public function show(Comisions $comisions)
     {
         //
     }

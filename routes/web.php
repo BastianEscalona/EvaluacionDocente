@@ -23,8 +23,8 @@ Route::get('/', function () {
 Route::resource('Facultad', 'FacultadController');
 Route::resource('Departamento', 'DepartamentoController');
 Route::resource('Academico', 'AcademicoController');
-Route::resource('Comision', 'ComisionsController');
 Route::resource('Evaluacion', 'EvaluacionController');
+Route::resource('Comisions', 'ComisionsController');
 
 Route::get('Evaluacion/create/{id_Academico}', [
     'as' => 'Evaluacion',

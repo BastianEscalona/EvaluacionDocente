@@ -49,7 +49,7 @@
                         <li class="nav-item">
 
                          <li class="nav-item">
-                               <a class="nav-link" href="{{ route('Comision.index') }}">{{ __('Comision') }}</a>
+                               <a class="nav-link" href="{{ route('Comisions.index') }}">{{ __('Comision') }}</a>
                         </li>
                                <a class="nav-link" href="{{ route('Evaluacion.index') }}">{{ __('Evaluacion') }}</a>
                         </li>

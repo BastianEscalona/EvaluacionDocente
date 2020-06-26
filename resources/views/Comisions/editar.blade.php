@@ -21,7 +21,7 @@
                 <th style=" width: 200px;">
                   <div class="form-group">
                     <label for="Nombre" class="control-label" > {{'Nombre de la Comision'}}</label>
-                    <input type="text" class="form-control" name="Nombre" id="Nombre" value="{{Comisions->Nombre}}" required>  
+                    <input type="text" class="form-control" name="Nombre" id="Nombre" value="{{$Comisions->Nombre}}"" required>  
                   </div>
                 </th>
                 </tr>
