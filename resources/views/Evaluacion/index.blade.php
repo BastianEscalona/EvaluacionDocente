@@ -28,7 +28,6 @@
                     <th>Nombre</th>
                     <th>Grado Academico</th>
                     <th>Fecha Evaluacion</th>
-                    <th>Departamento</th>
                     <th>Nota Final</th>
 
                 </tr>
@@ -41,12 +40,6 @@
                 <td>{{$evaluacion->nombre}}</td>
                 <td>{{$evaluacion->gradoAcademico}}</td>
                 <td>{{$evaluacion->fechaevaluacion}}</td>
-                <td> @foreach ($departamentos as $departamento)
-                        @if ($academico->departamento_id == $departamento->id)
-                            {{$departamento->nombre}}
-                        @endif
-                    @endforeach
-                </td>
                 <td>{{$evaluacion->notafinal}}</td>
 
                 <td>

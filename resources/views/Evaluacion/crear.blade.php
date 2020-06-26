@@ -120,48 +120,48 @@
 
       <tr>
         <td>Actividades de Docencia</td>
-        <td> <input type="number" name="t1" id="t1" max=100> </td>
-        <td> <input type="number" name="nota1" id="nota1" max=5 step=0.1> </td>
+        <td> <input type="number" name="t1" id="t1" max=100 onchange="pon(1); notaFinal();"> </td>
+        <td> <input type="number" name="nota1" id="nota1" max=5 step=0.1 onchange="pon(1); notaFinal();"> </td>
         <td></td>
-        <td></td>
+        <td> <input type="number" id="resu1" disabled > </td>
       </tr>
 
       <tr>
         <td>Actividades de Docencia</td>
-        <td> <input type="number" name="t2" id="t2" max=100> </td>
-        <td> <input type="number" name="nota2" id="nota2" max=5 step=0.1> </td>
+        <td> <input type="number" name="t2" id="t2" max=100 onchange="pon(2); notaFinal();"> </td>
+        <td> <input type="number" name="nota2" id="nota2" max=5 step=0.1 onchange="pon(2); notaFinal();"> </td>
         <td></td>
-        <td></td>
+        <td><input type="number" id="resu2" disabled > </td>
       </tr>
 
       <tr>
         <td>Extencion Y Vinculacion</td>
-        <td> <input type="number" name="t3" id="t3" max=100> </td>
-        <td> <input type="number" name="nota3" id="nota3" max=5 step=0.1> </td>
+        <td> <input type="number" name="t3" id="t3" max=100 onchange="pon(3); notaFinal();"> </td>
+        <td> <input type="number" name="nota3" id="nota3" max=5 step=0.1 onchange="pon(3); notaFinal();"> </td>
         <td></td>
-        <td></td>
+        <td><input type="number" id="resu3" disabled > </td>
       </tr>
 
       <tr>
         <td>Administracion Academica</td>
-        <td> <input type="number" name="t4" id="t4" max=100> </td>
-        <td> <input type="number" name="nota4" id="nota4" max=5 step=0.1> </td>
+        <td> <input type="number" name="t4" id="t4" max=100 onchange="pon(4); notaFinal();";> </td>
+        <td> <input type="number" name="nota4" id="nota4" max=5 step=0.1 onchange="pon(4); notaFinal();"> </td>
         <td></td>
-        <td></td>
+        <td><input type="number" id="resu4" disabled > </td>
       </tr>
 
       <tr>
         <td>Otras Actividades Realizadas</td>
-        <td> <input type="number" name="t5" id="t5" max=100> </td>
-        <td> <input type="number" name="nota5" id="nota5" max=5 step=0.1> </td>
+        <td> <input type="number" name="t5" id="t5" max=100 onchange="pon(5); notaFinal();";> </td>
+        <td> <input type="number" name="nota5" id="nota5" max=5 step=0.1 onchange="pon(5); notaFinal();"> </td>
         <td></td>
-        <td></td>
+        <td><input type="number" id="resu5" disabled > </td>
       </tr>
 
       <tr>
         <td colspan="3">Calificacion Final</td>
         <td></td>
-        <td> <input type="hidden" name="notafinal" id="notafinal" value="100"></td>
+        <td> <input type="number" name="notafinal" id="notafinal" step=0.1 ></td>
       </tr>
       
       </table>
@@ -184,4 +184,62 @@
   </form>
   
 </div>
+
+
+<script>
+
+function pon(pos){
+  switch (pos) {
+    case 1:
+      Strin_tiem = 't1';
+      Strin_nota = 'nota1';
+      Strin_resul = 'resu1';
+      break;
+    case 2:
+      Strin_tiem = 't2';
+      Strin_nota = 'nota2';
+      Strin_resul = 'resu2';
+      break;
+    case 3:
+      Strin_tiem = 't3';
+      Strin_nota = 'nota3';
+      Strin_resul = 'resu3';
+      break;
+    case 4:
+      Strin_tiem = 't4';
+      Strin_nota = 'nota4';
+      Strin_resul = 'resu4';
+      break;
+    case 5:
+      Strin_tiem = 't5';
+      Strin_nota = 'nota5';
+      Strin_resul = 'resu5';
+      break;
+  
+    default:
+      console.log("error");
+      break;
+  }
+  var t = document.getElementById(Strin_tiem).value;
+  var nota = document.getElementById(Strin_nota).value;
+
+
+  var resul = t*nota;
+
+  document.getElementById(Strin_resul).value = resul;
+}
+
+function notaFinal(){
+  var pon1 = parseFloat(document.getElementById('resu1').value);
+  var pon2 = parseFloat(document.getElementById('resu2').value);
+  var pon3 = parseFloat(document.getElementById('resu3').value);
+  var pon4 = parseFloat(document.getElementById('resu4').value);
+  var pon5 = parseFloat(document.getElementById('resu5').value);
+
+  var notafinal = pon1 + pon2 + pon3 + pon4 + pon5;
+  console.log(notafinal);
+  document.getElementById('notafinal').value = notafinal;
+}
+
+</script>
 @endsection
