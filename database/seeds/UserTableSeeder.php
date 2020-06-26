@@ -11,23 +11,25 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        $usuario = new User();
-        $usuario->name = 'Carlos';
-        $usuario->email = 'Carlos@ucm.cl';
-        $usuario->password = '12345678';
-        $usuario->save();
 
-        $usuario = new User();
-        $usuario->name = 'Octavio';
-        $usuario->email = 'Octavio@ucm.cl';
-        $usuario->password = '12345678';
-        $usuario->save();
+        //Soy Admin
+        $user = User::create(['id' => '1', 'name' =>'Bastian', 'email' => 'bastian@ucm.cl','password' => bcrypt('12345678')]);
+        $user->roles()->sync([1,1]);
 
-        $usuario = new User();
-        $usuario->name = 'Bastian';
-        $usuario->email = 'Bastian@ucm.cl';
-        $usuario->password = '12345678';
-        $usuario->save();
+        
+        $user = User::create(['id' => '2', 'name' =>'Carlos', 'email' => 'carlos@ucm.cl','password' => bcrypt('12345678')]);
+        $user->roles()->sync([1,1]);
+
+        $user = User::create(['id' => '3', 'name' =>'Octavio', 'email' => 'octavio@ucm.cl','password' => bcrypt('12345678')]);
+        $user->roles()->sync([1,1]);
+
+
+        //Secretarias
+        $user = User::create(['id' => '4', 'name' =>'Secretaria 1', 'email' => 'secretaria1@ucm.cl','password' => bcrypt('12345678')]);
+        $user->roles()->sync([2,2]);
+
+        $user = User::create(['id' => '5', 'name' =>'Secretaria 2', 'email' => 'secretaria2@ucm.cl','password' => bcrypt('12345678')]);
+        $user->roles()->sync([2,2]);
 
     }
 }
