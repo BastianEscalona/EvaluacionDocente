@@ -155,10 +155,10 @@ class EvaluacionController extends Controller
      * @param  \App\Evaluacion  $evaluacion
      * @return \Illuminate\Http\Response
      */
-    public function destroy( $id)
+    public function destroy($id)
     {
         $evaluacion = Evaluacion::findOrfail($id);
-        $evaluacion = delete();
+        $evaluacion -> delete();
 
         return redirect('Evaluacion')->with('Mensaje', 'Evaluacion Eliminada');
     }

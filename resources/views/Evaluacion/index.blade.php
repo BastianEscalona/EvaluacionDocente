@@ -29,6 +29,7 @@
                     <th>Grado Academico</th>
                     <th>Fecha Evaluacion</th>
                     <th>Nota Final</th>
+                    <th>Acciones</th>
 
                 </tr>
             </thead>
