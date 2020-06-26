@@ -41,3 +41,4 @@ Route::get('/facultad', function () {
 Auth::routes(['reset'=>false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+//
