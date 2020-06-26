@@ -26,7 +26,10 @@ Route::resource('Academico', 'AcademicoController');
 Route::resource('Comision', 'ComisionController');
 Route::resource('Evaluacion', 'EvaluacionController');
 
-
+Route::get('Evaluacion/create/{id_Academico}', [
+    'as' => 'Evaluacion',
+    'uses' => 'EvaluacionController@create',
+]);
 /* Route::get('/facultad/editar', function () {
     return view('Facultad.editar');
 });

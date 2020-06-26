@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Evaluacion;
 use Illuminate\Http\Request;
 use App\Departamento;
+use App\Academico;
 
 class EvaluacionController extends Controller
 {
@@ -26,10 +27,11 @@ class EvaluacionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id_Academico)
     {
+        $academico = Academico::find($id_Academico);
         $departamentos = Departamento::all();
-        return view('Academico.crear', compact('departamentos'));
+        return view('Evaluacion.crear', compact('departamentos', 'academico'));
     }
 
     /**
