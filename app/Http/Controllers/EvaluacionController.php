@@ -6,6 +6,7 @@ use App\Evaluacion;
 use Illuminate\Http\Request;
 use App\Departamento;
 use App\Academico;
+use App\Facultad;
 
 class EvaluacionController extends Controller
 {
@@ -31,7 +32,8 @@ class EvaluacionController extends Controller
     {
         $academico = Academico::find($id_Academico);
         $departamentos = Departamento::all();
-        return view('Evaluacion.crear', compact('departamentos', 'academico'));
+        $facultades = Facultad::all();
+        return view('Evaluacion.crear', compact('departamentos', 'academico', 'facultades'));
     }
 
     /**

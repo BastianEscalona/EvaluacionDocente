@@ -16,7 +16,7 @@
     </div>
 @endif
 
-<a class="btn btn-success" href ="{{url('Evaluacion/create', $id_Academico->1)}}" > <i class="fas fa-user-plus" style="font-size: 24px;" ></i>   </a> 
+<a class="btn btn-success" href ="{{url('Evaluacion/create', $id_Academico=1)}}" > <i class="fas fa-user-plus" style="font-size: 24px;" ></i>   </a> 
 </br>
 </br>
 <div class="row">
