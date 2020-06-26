@@ -14,8 +14,10 @@
       <h4>IDENTIFICACION</h4>
       <table class="table table-striped table-bordered">
         <tr>
-          <td>{{$academico->id}}
-          <input type="hidden" name="academico_id" id="academico_id" value="{{$academico->id}}"></td>
+          <td>
+          <input type="hidden" name="academico_id" id="academico_id" value="{{$academico->id}}">
+          <input type="hidden" name="email" id="email" value="{{$academico->email}}">
+          </td>
           <td></td>
         </tr>
         <tr>
@@ -123,7 +125,7 @@
         <td> <input type="number" name="t1" id="t1" max=100 onchange="pon(1); notaFinal();"> </td>
         <td> <input type="number" name="nota1" id="nota1" max=5 step=0.1 onchange="pon(1); notaFinal();"> </td>
         <td></td>
-        <td> <input type="number" id="resu1" disabled > </td>
+        <td> <input type="number" id="resu1" disabled value="0" > </td>
       </tr>
 
       <tr>
@@ -131,7 +133,7 @@
         <td> <input type="number" name="t2" id="t2" max=100 onchange="pon(2); notaFinal();"> </td>
         <td> <input type="number" name="nota2" id="nota2" max=5 step=0.1 onchange="pon(2); notaFinal();"> </td>
         <td></td>
-        <td><input type="number" id="resu2" disabled > </td>
+        <td><input type="number" id="resu2" disabled value="0"> </td>
       </tr>
 
       <tr>
@@ -139,7 +141,7 @@
         <td> <input type="number" name="t3" id="t3" max=100 onchange="pon(3); notaFinal();"> </td>
         <td> <input type="number" name="nota3" id="nota3" max=5 step=0.1 onchange="pon(3); notaFinal();"> </td>
         <td></td>
-        <td><input type="number" id="resu3" disabled > </td>
+        <td><input type="number" id="resu3" disabled value="0"> </td>
       </tr>
 
       <tr>
@@ -147,7 +149,7 @@
         <td> <input type="number" name="t4" id="t4" max=100 onchange="pon(4); notaFinal();";> </td>
         <td> <input type="number" name="nota4" id="nota4" max=5 step=0.1 onchange="pon(4); notaFinal();"> </td>
         <td></td>
-        <td><input type="number" id="resu4" disabled > </td>
+        <td><input type="number" id="resu4" disabled value="0"> </td>
       </tr>
 
       <tr>
@@ -155,13 +157,13 @@
         <td> <input type="number" name="t5" id="t5" max=100 onchange="pon(5); notaFinal();";> </td>
         <td> <input type="number" name="nota5" id="nota5" max=5 step=0.1 onchange="pon(5); notaFinal();"> </td>
         <td></td>
-        <td><input type="number" id="resu5" disabled > </td>
+        <td><input type="number" id="resu5" disabled value="0"> </td>
       </tr>
 
       <tr>
         <td colspan="3">Calificacion Final</td>
         <td></td>
-        <td> <input type="number" name="notafinal" id="notafinal" step=0.1 ></td>
+        <td> <input type="number" name="notafinal" disabled id="notafinal" step=0.1 ></td>
       </tr>
       
       </table>
@@ -225,6 +227,8 @@ function pon(pos){
 
 
   var resul = t*nota;
+  resul /= 100;
+  resul = resul.toFixed(1);
 
   document.getElementById(Strin_resul).value = resul;
 }
@@ -237,8 +241,7 @@ function notaFinal(){
   var pon5 = parseFloat(document.getElementById('resu5').value);
 
   var notafinal = pon1 + pon2 + pon3 + pon4 + pon5;
-  console.log(notafinal);
-  document.getElementById('notafinal').value = notafinal;
+  document.getElementById('notafinal').value = notafinal.toFixed(1);
 }
 
 </script>
