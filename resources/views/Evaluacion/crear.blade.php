@@ -163,7 +163,7 @@
       <tr>
         <td colspan="3">Calificacion Final</td>
         <td><label for="" id="escalafinal"></label></td>
-        <td> <input type="number" name="notafinal" disabled id="notafinal" step=0.01 onchange="valorEscala();" ></td>
+        <td> <input type="text" name="notafinal"  id="notafinal" ></td>
       </tr>
       
       </table>
@@ -234,8 +234,6 @@ function pon(pos){
   document.getElementById(Strin_resul).value = resul;
 };
 
-
-
 function notaFinal(){
   var pon1 = parseFloat(document.getElementById('resu1').value);
   var pon2 = parseFloat(document.getElementById('resu2').value);
@@ -248,7 +246,7 @@ function notaFinal(){
   document.getElementById('notafinal').value = notafinal;
 
   
-  document.querySelector('#escalafinal').innerText = valorEscala(notafinal);;
+  //document.querySelector('#escalafinal').innerText = valorEscala(notafinal);
 };
 
 

@@ -164,8 +164,9 @@
 
       <tr>
         <td colspan="3">Calificacion Final</td>
-        <td></td>
-        <td> <input type="number" name="notafinal" disabled id="notafinal" step=0.1 ></td>
+        <td><label for="" id="escalafinal"></label></td>
+
+        <td> <input type="number" name="notafinal"  id="notafinal" step=0.01 ></td>
       </tr>
       
       </table>
@@ -245,7 +246,32 @@ function notaFinal(){
 
   var notafinal = pon1 + pon2 + pon3 + pon4 + pon5;
   document.getElementById('notafinal').value = notafinal.toFixed(1);
+
+  document.querySelector('#escalafinal').innerText = valorEscala(notafinal);;
+
 }
 
 </script>
+
+
+<script>
+  function valorEscala(valor){
+  var escala = "";
+  console.log(valor);
+  if (valor < 2.7){
+    escala = "DEFICIENTE";
+  }else if (valor < 3.4){
+    escala = "REGULAR";
+  }else if (valor < 3.9){
+    escala = "BUENO";
+  }else if (valor < 4.4){
+    escala = "MUY BUENO";
+  }else{ 
+    escala = "EXCELENTE";
+  }
+  
+  return escala;
+  console.log(escala);
+
+};
 @endsection
