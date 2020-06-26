@@ -19,7 +19,7 @@ class EvaluacionController extends Controller
     {
         $request->user()->authorizeRoles(['admin','secre']);
         $evaluaciones = Evaluacion::all();
-        $evaluaciones = Evaluacion::paginate(5);
+        $evaluaciones = Evaluacion::paginate(10);
         $departamentos = Departamento::all();
         return view('Evaluacion.index', compact('evaluaciones', 'departamentos'));
     }
