@@ -40,6 +40,7 @@ class CreateEvaluacionsTable extends Migration
             $table->string('argumento');
             $table->date('fechaevaluacion');
             $table->string('email');
+            $table->timestamps();
 
             $table->foreign('academico_id')
             ->references('id')
