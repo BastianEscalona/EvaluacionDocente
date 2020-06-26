@@ -24,5 +24,22 @@ class AcademicoSeeder extends Seeder
         $academico->departamento_id='17';
         $academico->save();
 
+        $academico=new Academico();
+        $academico ->rut='22.222.222-2';
+        $academico->titulo='Doctorado en Ciencias de la Computación';
+        $academico->gradoAcademico='Doctor';
+        $academico->categoria='Full';
+        $academico->HorasContrato='45';
+        $academico->nombre='Marco';
+        $academico->apellido='Toranzo Céspedes';
+        $academico->email='mtoranzo@ucm.cl';
+        $academico->estado='1';
+        $academico->departamento_id='12';
+        $academico->save();
+
+
+
+
+
     }
 }
