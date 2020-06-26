@@ -15,8 +15,9 @@ class EvaluacionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $request->user()->authorizeRoles(['admin','secre']);
         $evaluaciones = Evaluacion::all();
         $evaluaciones = Evaluacion::paginate(5);
         $departamentos = Departamento::all();

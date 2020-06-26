@@ -11,9 +11,9 @@ class ComisionsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $request->user()->authorizeRoles(['admin','secre']);
         $comisions = Comisions::all();
         $comisions = Comisions::paginate(5);
         return view('comisions.index', compact('comisions'));
