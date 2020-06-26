@@ -50,8 +50,8 @@ class EvaluacionController extends Controller
         $evaluaciones->academico_id = request('academico_id');
         $evaluaciones->comision_id = 1;
         $evaluaciones->nombre = request('nombre');
-        $evaluaciones->fechainicio= date('2020-05-20');
-        $evaluaciones->fechafinal= date('2020-05-20');
+        $evaluaciones->fechainicio= date('Y-m-d');
+        $evaluaciones->fechafinal= date('Y-m-d');
         $evaluaciones->titulo = request('titulo');
         $evaluaciones->gradoAcademico = request('gradoAcademico');
         $evaluaciones->categoria = request('categoria');
@@ -70,7 +70,7 @@ class EvaluacionController extends Controller
         $evaluaciones->nota5 = request('nota5');
         $evaluaciones->notafinal = request('notafinal');
         $evaluaciones->argumento = request('argumento');
-        $evaluaciones->fechaevaluacion= date('2020-05-20');
+        $evaluaciones->fechaevaluacion= date('Y-m-d');
         $evaluaciones->email = request('email');
 
         $evaluaciones->save();
@@ -122,8 +122,7 @@ class EvaluacionController extends Controller
         $evaluaciones->academico_id = request('academico_id');
         $evaluaciones->comision_id = 1;
         $evaluaciones->nombre = request('nombre');
-        $evaluaciones->fechainicio= date('2020-05-20');
-        $evaluaciones->fechafinal= date('2020-05-20');
+        $evaluaciones->fechafinal= date('Y-m-d');
         $evaluaciones->titulo = request('titulo');
         $evaluaciones->gradoAcademico = request('gradoAcademico');
         $evaluaciones->categoria = request('categoria');
@@ -142,7 +141,7 @@ class EvaluacionController extends Controller
         $evaluaciones->nota5 = request('nota5');
         $evaluaciones->notafinal = request('notafinal');
         $evaluaciones->argumento = request('argumento');
-        $evaluaciones->fechaevaluacion= date('2020-05-20');
+        $evaluaciones->fechaevaluacion= date('Y-m-d');
         $evaluaciones->email = request('email');
 
         $evaluaciones->save();
