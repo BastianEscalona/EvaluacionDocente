@@ -15,10 +15,10 @@ class ComisionsController extends Controller
     public function index()
     {
         //
-        $comisiones = Comisions::all();
-        $comisiones = Comisions::paginate(5);
+        $comisions = Comisions::all();
+        $comisions = Comisions::paginate(5);
         $academicos = Academico::all();
-        return view('Comisions.index', compact('comisiones', 'academicos'));
+        return view('comisions.index', compact('comisions'));
     }
 
     /**
