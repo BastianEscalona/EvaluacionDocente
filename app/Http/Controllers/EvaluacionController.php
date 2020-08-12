@@ -174,7 +174,7 @@ class EvaluacionController extends Controller
 
         $pdf = \PDF::loadView('Evaluacion.vista-pdf', compact('evaluacion','departamentos', 'academico', 'facultades'));
 
-        return $pdf->stream('archivo.pdf');
+        return $pdf->download('archivo.pdf');
 
         #return redirect('Evaluacion') -> with('Mensaje', 'Se ha generado PDF');
  
