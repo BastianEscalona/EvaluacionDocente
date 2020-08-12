@@ -95,7 +95,7 @@
 
           <td>
             Chikorita
-            <input type="hidden" name="tipoplanta" id="tipoplanta" value="Chikorita" >
+            <input type="hidden" name="tipoplanta" id="tipoplanta" value="S" >
           </td>
         </tr>
         <tr>

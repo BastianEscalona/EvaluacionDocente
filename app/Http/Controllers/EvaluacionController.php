@@ -8,6 +8,7 @@ use App\Departamento;
 use App\Academico;
 use App\Facultad;
 
+
 class EvaluacionController extends Controller
 {
     /**
@@ -161,5 +162,21 @@ class EvaluacionController extends Controller
         $evaluacion -> delete();
 
         return redirect('Evaluacion')->with('Mensaje', 'Evaluacion Eliminada');
+    }
+
+    public function download($id_Academico)
+    {
+        $departamentos = Departamento::all();
+        $evaluacion = Evaluacion::where('academico_id', $id_Academico)->first();
+        $academico = Academico::find($evaluacion->academico_id);
+        $facultades = Facultad::all();
+
+
+        $pdf = \PDF::loadView('Evaluacion.vista-pdf', compact('evaluacion','departamentos', 'academico', 'facultades'));
+
+        return $pdf->stream('archivo.pdf');
+
+        #return redirect('Evaluacion') -> with('Mensaje', 'Se ha generado PDF');
+ 
     }
 }

@@ -6,6 +6,7 @@ use App\Academico;
 use Illuminate\Http\Request;
 use App\Departamento;
 
+
 class AcademicoController extends Controller
 {
     /**

@@ -30,6 +30,10 @@ Route::get('Evaluacion/create/{id_Academico}', [
     'as' => 'Evaluacion',
     'uses' => 'EvaluacionController@create',
 ]);
+Route::get('Evaluacion/download/{id_Academico}', [
+    'as' => 'Evaluacion',
+    'uses' => 'EvaluacionController@download',
+]);
 /* Route::get('/facultad/editar', function () {
     return view('Facultad.editar');
 });

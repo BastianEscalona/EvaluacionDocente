@@ -58,6 +58,7 @@
                 </td>
                 <td>
                     <a class="btn btn-success" href ="{{url('Evaluacion/create', $id_Academico=$academico->id)}}" > Evaluar   </a> 
+                    <a class="btn btn-success" href ="{{url('Evaluacion/download', $id_Academico=$academico->id)}}" > PDF   </a> 
 
                     <a class="btn btn-link" href="{{ url('/Academico/'.$academico->id.'/edit') }}" > <i class="fas fa-pencil-alt" style="font-size: 24px;" > </i>  </a>
                 
