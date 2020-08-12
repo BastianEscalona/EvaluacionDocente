@@ -18,7 +18,7 @@ class AcademicoController extends Controller
     {
         $request->user()->authorizeRoles(['admin','secre']);
         $academicos = Academico::all();
-        $academicos = Academico::paginate(10);
+        $academicos = Academico::paginate(7);
         $departamentos = Departamento::all();
         return view('Academico.index', compact('academicos', 'departamentos'));
     }

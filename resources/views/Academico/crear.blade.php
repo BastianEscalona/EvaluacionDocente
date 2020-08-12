@@ -64,7 +64,7 @@
                     <label for="exampleFormControlSelect1">Estado</label>
                         <select class="form-control" id="estado" name="estado" >
                             <option value = '1' >Activo</option>
-                            <option value = '0' > Desactivo </option>
+                            <option value = '0' >Inactivo </option>
                         </select> 
                   </div>
                   <div class="form-group">
