@@ -15,7 +15,7 @@ class ComisionsController extends Controller
     {
         $request->user()->authorizeRoles(['admin','secre']);
         $comisions = Comisions::all();
-        $comisions = Comisions::paginate(10);
+        $comisions = Comisions::paginate(7);
         return view('comisions.index', compact('comisions'));
     }
 

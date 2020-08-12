@@ -17,7 +17,7 @@ class DepartamentoController extends Controller
     {
         $request->user()->authorizeRoles(['admin']);
         $departamentos = Departamento::all();
-        $departamentos = Departamento::paginate(10);
+        $departamentos = Departamento::paginate(7);
         $facultads = Facultad::all();
         return view('Departamento.index', compact('departamentos', 'facultads'));
     }
