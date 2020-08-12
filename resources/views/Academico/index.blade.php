@@ -36,7 +36,8 @@
                     <th>Departamento</th>
                     <th>Evaluar</th>
                     <th>Generar PDF</th>
-                    <th>Acciones</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
                 </tr>
             </thead>
 
@@ -72,12 +73,14 @@
                 </td>  
 
                 <td>
-                <a class="btn btn-success" href ="{{url('Evaluacion/download', $id_Academico=$academico->id)}}" > PDF   </a> 
+               
+                <a class="btn btn-link" href ="{{url('Evaluacion/download', $id_Academico=$academico->id)}}" >  <i class="far fa-file-pdf" style="font-size: 36px;color:orange"></i>   </a> 
                 </td>
 
                 <td>
                     <a class="btn btn-link" href="{{ url('/Academico/'.$academico->id.'/edit') }}" > <i class="fas fa-pencil-alt" style="font-size: 24px;" > </i>  </a>
-                
+                </td>
+                <td>
                     <form method="POST" action="/Academico/{{$academico->id}}" style="display:inline">
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
