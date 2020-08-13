@@ -95,7 +95,7 @@
           </td>
 
           <td>
-            Chikorita
+            S
             <input type="hidden" name="tipoplanta" id="tipoplanta" value="S" >
           </td>
         </tr>
