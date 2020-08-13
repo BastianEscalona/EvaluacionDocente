@@ -4,6 +4,8 @@
 @section('content')
 
 <div class="container">
+<body style="background-color: #f0f8ff;">
+
 <form method="post" action="{{url('/Academico/'.$academicos->id)}}" enctype = "multipart/form-data">
 {{ csrf_field()}}
 {{ method_field('PATCH')}}
@@ -86,5 +88,6 @@
 
 </form>
 </div>
+</body>
 
 @endsection

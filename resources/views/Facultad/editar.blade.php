@@ -2,7 +2,7 @@
 @extends('layouts.app2')
 
 @section('content')
-
+<body style="background-color: #f0f8ff;">
 <div class="container">
 <form method="post" action="{{url('/Facultad/'.$Facultad->id)}}" enctype = "multipart/form-data">
 {{ csrf_field()}}
@@ -39,5 +39,5 @@
 
 </form>
 </div>
-
+</body>
 @endsection

@@ -3,7 +3,7 @@
 @extends('layouts.app2')
 
 @section('content')
-
+<body style="background-color: #f0f8ff;">
 <div class="container">
           <a  class="btn btn-link" href ="{{url('Facultad')}}" > <i class="fas fa-home" style="font-size: 48px;" > </i>  </a>
 
@@ -43,4 +43,5 @@
 </form>
 
 </div>
+</body>
 @endsection

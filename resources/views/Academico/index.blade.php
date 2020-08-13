@@ -6,7 +6,7 @@
  </style>
 @extends('layouts.app2')
 @section('content')
-
+<body style="background-color: #f0f8ff;">
 <div class="container">
   <a class="btn btn-link" href="{{url('Bienvenido')}}">
     <i class="fas fa-home" style="font-size: 48px;"></i>
@@ -23,9 +23,9 @@
 <a class="btn btn-success" href ="{{url('Academico/create')}}" > <i class="fas fa-user-plus" style="font-size: 24px;" ></i>   </a> 
 </br>
 </br>
-<div class="row">
+<div class="row" >
     <div class="col-12 table-responsive">
-        <table class="table table-light table-hover">
+        <table class="table table-light table-hover" style="background-color: #f8f8f8;">
             <thead class="thead-light">
                 <tr>
                     <th># </th>
@@ -106,4 +106,5 @@
 </div>
 
 </div>
+</body> 
 @endsection

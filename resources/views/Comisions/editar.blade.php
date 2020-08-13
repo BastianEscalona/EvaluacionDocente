@@ -2,7 +2,7 @@
 @extends('layouts.app2')
 
 @section('content')
-
+<body style="background-color: #f0f8ff;">
 <div class="container">
 <form method="post" action="{{url('/Comisions/'.$Comisions->id)}}" enctype = "multipart/form-data">
 {{ csrf_field()}}
@@ -21,7 +21,7 @@
                 <th style=" width: 200px;">
                   <div class="form-group">
                     <label for="Nombre" class="control-label" > {{'Nombre de la Comision'}}</label>
-                    <input type="text" class="form-control" name="Nombre" id="Nombre" value="{{$Comisions->Nombre}}"" required>  
+                    <input type="text" class="form-control" name="Nombre" id="Nombre" value="{{$Comisions->Nombre}}" required>  
                   </div>
                 </th>
                 </tr>
@@ -36,4 +36,5 @@
 </form>
 </div>
 
+</body>
 @endsection
