@@ -12,103 +12,103 @@ class DepartamentoSeeder extends Seeder
     public function run()
     {
         $departamento = new Departamento();
-        $departamento->nombre = 'DEPARTAMENTO DE CIENCIAS PRE-CLÍNICAS';
+        $departamento->nombre = 'Departamento de ciencias pre-clínicas';
         $departamento->facultad_id = '1';
         $departamento->save();
 
         $departamento = new Departamento();
-        $departamento->nombre = 'DEPARTAMENTO DE CIENCIAS CLÍNICAS';
+        $departamento->nombre = 'Departamento de ciencias clínicas';
         $departamento->facultad_id = '1';
         $departamento->save();
 
         $departamento = new Departamento();
-        $departamento->nombre = 'DEPARTAMENTO DE FORMACIÓN INICIAL ESCOLAR';
+        $departamento->nombre = 'Departamento de formación inicial escolar';
         $departamento->facultad_id = '2';
         $departamento->save();
 
         $departamento = new Departamento();
-        $departamento->nombre = 'DEPARTAMENTO DE LENGUA CASTELLANA Y LITERATURA';
+        $departamento->nombre = 'Departamento de lengua castellana y literatura';
         $departamento->facultad_id = '2';
         $departamento->save();
 
         $departamento = new Departamento();
-        $departamento->nombre = 'DEPARTAMENTO DE DIVERSIDAD E INCLUSIVIDAD EDUCATIVA';
+        $departamento->nombre = 'Departamento de diversidad e inclusividad educativa';
         $departamento->facultad_id = '2';
         $departamento->save();
 
         $departamento = new Departamento();
-        $departamento->nombre = 'DEPARTAMENTO DE CIENCIAS DE LA ACTIVIDAD FÍSICA';
+        $departamento->nombre = 'Departamento de ciencias de la actividad física';
         $departamento->facultad_id = '2';
         $departamento->save();
 
         $departamento = new Departamento();
-        $departamento->nombre = 'DEPARTAMENTO DE IDIOMAS';
-        $departamento->facultad_id = '2';
-        $departamento->save();
-        
-        $departamento = new Departamento();
-        $departamento->nombre = 'DEPARTAMENTO DE FUNDAMENTOS DE LA EDUCACIÓN';
+        $departamento->nombre = 'Departamento de idiomas'; 
         $departamento->facultad_id = '2';
         $departamento->save();
         
         $departamento = new Departamento();
-        $departamento->nombre = 'DEPARTAMENTO DE ENFERMERÍA';
+        $departamento->nombre = 'Departamento de fundamentos de la educación';
+        $departamento->facultad_id = '2';
+        $departamento->save();
+        
+        $departamento = new Departamento();
+        $departamento->nombre = 'Departamento de enfermería'; 
         $departamento->facultad_id = '3';
         $departamento->save();
 
         $departamento = new Departamento();
-        $departamento->nombre = 'DEPARTAMENTO DE PSICOLOGÍA';
+        $departamento->nombre = 'Departamento de psicología';
         $departamento->facultad_id = '3';
         $departamento->save();
 
         $departamento = new Departamento();
-        $departamento->nombre = 'DEPARTAMENTO DE KINESIOLOGÍA';
+        $departamento->nombre = 'Departamento de kinesiología';
         $departamento->facultad_id = '3';
         $departamento->save();
 
         $departamento = new Departamento();
-        $departamento->nombre = 'DEPARTAMENTO DE COMPUTACIÓN E INDUSTRIAS';
+        $departamento->nombre = 'Departamento de computación e industrias'; 
         $departamento->facultad_id = '4';
         $departamento->save();
 
         $departamento = new Departamento();
-        $departamento->nombre = 'DEPARTAMENTO DE OBRAS CIVILES';
+        $departamento->nombre = 'Departamento de obras civiles'; 
         $departamento->facultad_id = '4';
         $departamento->save();
 
         $departamento = new Departamento();
-        $departamento->nombre = 'FACULTAD DE CIENCIAS AGRARIAS';
+        $departamento->nombre = 'Facultad de ciencias agrarias'; 
         $departamento->facultad_id = '5';
         $departamento->save();
 
         $departamento = new Departamento();
-        $departamento->nombre = 'DEPARTAMENTO DE CIENCIAS SOCIALES';
+        $departamento->nombre = 'Departamento de ciencias sociales'; 
         $departamento->facultad_id = '6';
         $departamento->save();
 
         $departamento = new Departamento();
-        $departamento->nombre = 'DEPARTAMENTO DE ECONOMÍA Y ADMINISTRACIÓN';
+        $departamento->nombre = 'Departamento de economía y administración'; 
         $departamento->facultad_id = '6';
         $departamento->save();
 
         $departamento = new Departamento();
-        $departamento->nombre = 'DEPARTAMENTO DE FILOSOFÍA';
+        $departamento->nombre = 'Deparatamento de filosofía'; 
         $departamento->facultad_id = '7';
         $departamento->save();
 
         $departamento = new Departamento();
-        $departamento->nombre = 'DEPARTAMENTO DE TEOLOGÍA';
+        $departamento->nombre = 'Departamento de teología'; 
         $departamento->facultad_id = '7';
         $departamento->save();
 
         $departamento = new Departamento();
-        $departamento->nombre = 'DEPARTAMENTO DE BIOLOGÍA Y QUÍMICA';
+        $departamento->nombre = 'Departamento de biología y química'; 
         $departamento->facultad_id = '8';
         $departamento->save();
 
         
         $departamento = new Departamento();
-        $departamento->nombre = 'DEPARTAMENTO DE MATEMÁTICA, FÍSICA Y ESTADÍSTICA';
+        $departamento->nombre = 'Departamento de matemática, física y estadística'; 
         $departamento->facultad_id = '8';
         $departamento->save();
 

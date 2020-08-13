@@ -4,9 +4,9 @@
     <title>EVALUACION DOCENTE</title>
   </head>
   <body>
-      <h1>EVALUACION DOCENTE</h1>
+      <h5 align="center" >PAUTA RESUMEN</h5>
     <div class="Identificacion">
-      <h4>IDENTIFICACION</h4>
+      <h6>1.IDENTIFICACION</h6>
       <table class="table table-striped table-bordered">
         <tr> 
           <td> {{$evaluacion->nombre}} </td>
@@ -30,7 +30,8 @@
               @endif
             @endforeach
           </td>
-          <td>          
+          <td> 
+            {{$evaluacion->fechainicio}} 
           </td>
         </tr>
         <tr>
@@ -57,7 +58,11 @@
         </tr>
 
         <tr>
-          <td></td>
+          <td>@if( $evaluacion->notafinal != NULL)
+            {{$evaluacion->notafinal}}
+            @endif
+
+          </td>
           <td>{{$evaluacion->tipoplanta}}</td>
         </tr>
         <tr>
