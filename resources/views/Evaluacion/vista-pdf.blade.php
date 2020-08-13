@@ -277,27 +277,27 @@
         </tr>
       </table>
     </div>
+    <div class="Escala">
+      <h4>IV. Argumentos de la calificación</h4>
+      <table class="table table-striped table-bordered">
+        <td> {{$evaluacion->argumento}}  </td>
+      </table>
+    </div>
+    <h4 align="center" >Firma Comision</h4>
+    <table class="table table-striped table-bordered">
+        <tr> 
+          <td> {{$evaluacion->comision_id->}} </td>
+          <td> 
+              {{$evaluacion->nombre}}
+          </td>
+          <td> {{$evaluacion->nombre}} </td>
+        </tr>
+        <tr>
+          <td>Nombre</td>
+          <td>Nombre</td>
+          <td>Nombre</td>
+        </tr>
+
   </body>
 </html>
-<!--
 
-
-      
-      </table>
-    
-    </div>
-
-    <div>
-      <h4>Escala Evaluativa</h4>
-      <label>Escala: Exelente = 4.5 a 5     Muy Bueno = 4.0 a 4.4       Bueno= 3.5 a 3.9</label>
-      <label>        Regular = 3.4 a 2.7       Deficiente = menos de 2.7</label>
-    </div>
-
-    <div>
-      <h4>ARGUMENTO DE LA CALIFICACION FINAL</h4>
-      <textarea id="argumento" name="argumento" rows="4" cols="50">
-      </textarea>
-    </div>
-
-  
-</div-->
