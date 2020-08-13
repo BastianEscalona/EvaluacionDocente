@@ -279,24 +279,24 @@
     </div>
     <div class="Escala">
       <h4>IV. Argumentos de la calificación</h4>
-      <table class="table table-sm">
+      <table class="table table-striped table-bordered table-sm">
         <td> {{$evaluacion->argumento}}  </td>
       </table>
     </div>
     <div>
     <h4 align="center" >Firma Comision</h4>
-    <table class="table table-sm">
+    <table class="table table-striped table-bordered table-sm">
         <tr> 
           <td> {{$evaluacion->comision_id}} </td>
           <td> 
-              {{$evaluacion->nombre}}
+              {{$evaluacion->comision_id}}
           </td>
-          <td> {{$evaluacion->nombre}} </td>
+          <td> {{$evaluacion->comision_id}} </td>
         </tr>
         <tr>
-          <td>Nombre</td>
-          <td>Nombre</td>
-          <td>Nombre</td>
+          <td>Comisionado 1</td>
+          <td>Comisionado 2</td>
+          <td>Comisionado 3</td>
         </tr>
     </div>
   </body>
