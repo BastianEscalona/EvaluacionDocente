@@ -7,7 +7,7 @@
       <h5 align="center" >PAUTA RESUMEN</h5>
     <div class="Identificacion">
       <h6>I. IDENTIFICACIÓN:</h6>
-      <table class="table table-striped table-bordered">
+      <table class="table table-striped table-bordered table-sm">
         <tr> 
           <td> {{$evaluacion->nombre}} </td>
           <td> 
@@ -70,7 +70,7 @@
 
     <div class="Calificacion">
       <h6>II. CALIFICACION ACADEMICA:</h6>
-      <table class="table table-striped table-bordered">
+      <table class="table table-striped table-bordered table-sm">
         <tr>
           <td></td>
           <td>% de tiempo asignado a tareas programadas</td>
@@ -279,12 +279,13 @@
     </div>
     <div class="Escala">
       <h4>IV. Argumentos de la calificación</h4>
-      <table class="table table-striped table-bordered">
+      <table class="table table-sm">
         <td> {{$evaluacion->argumento}}  </td>
       </table>
     </div>
+    <div>
     <h4 align="center" >Firma Comision</h4>
-    <table class="table table-striped table-bordered">
+    <table class="table table-sm">
         <tr> 
           <td> {{$evaluacion->comision_id}} </td>
           <td> 
@@ -297,7 +298,7 @@
           <td>Nombre</td>
           <td>Nombre</td>
         </tr>
-
+    </div>
   </body>
 </html>
 
