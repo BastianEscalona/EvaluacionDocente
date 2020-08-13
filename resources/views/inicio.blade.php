@@ -95,7 +95,7 @@
 <body background="https://portal.ucm.cl//content/uploads/2016/10/universidad-ucm.jpg"
 	<!--   Tarjetas-->
 <div class="title-cards">
-		<h2>Evaluacion Docente</h2>
+		<h2></h2>
 	</div>
 <div class="container-card">
 	
