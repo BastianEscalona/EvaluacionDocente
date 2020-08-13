@@ -45,31 +45,8 @@
                        <li class="nav-item">
                                <a class="nav-link" href="{{ route('Departamento.index') }}">{{ __('Departamento') }}</a>
                         </li>
-                        <li class="nav-item">
-                               <a class="nav-link" href="{{ route('Academico.index') }}">{{ __('Academico') }}</a>
-                        </li>
-                        <li class="nav-item">
 
-                         <li class="nav-item">
-                               <a class="nav-link" href="{{ route('Comisions.index') }}">{{ __('Comision') }}</a>
-                        
-                        </li>
-                               <a class="nav-link" href="{{ route('Evaluacion.index') }}">{{ __('Evaluacion') }}</a>
-                        </li>
                         @endif
-                       @if(@Auth::user()->hasRole('secre'))
-                       <li class="nav-item">
-                               <a class="nav-link" href="{{ route('Academico.index') }}">{{ __('Academico') }}</a>
-                        </li>
-                        <li class="nav-item">
-
-                         <li class="nav-item">
-                               <a class="nav-link" href="{{ route('Comisions.index') }}">{{ __('Comision') }}</a>
-                        
-                        </li>
-                               <a class="nav-link" href="{{ route('Evaluacion.index') }}">{{ __('Evaluacion') }}</a>
-                        </li>
-                        @endif 
                                                         
                     </ul>
                     <ul class="navbar-nav mr-auto">

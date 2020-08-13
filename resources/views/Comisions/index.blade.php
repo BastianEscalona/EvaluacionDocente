@@ -10,6 +10,9 @@
 @section('content')
 
 <div class="container">
+  <a class="btn btn-link" href="{{url('Bienvenido')}}">
+    <i class="fas fa-home" style="font-size: 48px;"></i>
+  </a>
 
 @if(Session::has('Mensaje'))
 
