@@ -28,7 +28,7 @@ Route::resource('Departamento', 'DepartamentoController');
 Route::resource('Academico', 'AcademicoController');
 Route::resource('Evaluacion', 'EvaluacionController');
 Route::resource('Comisions', 'ComisionsController');
-
+Route::resource('AsignarComision','AcademicothascomisionController');
 
 Route::get('Evaluacion/create/{id_Academico}', [
     'as' => 'Evaluacion',
@@ -51,3 +51,4 @@ Auth::routes(['reset'=>false]);
 Route::get('/home', 'HomeController@index')->name('home');
 
 //
+
