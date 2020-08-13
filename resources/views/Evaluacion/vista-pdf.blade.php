@@ -286,7 +286,7 @@
     <h4 align="center" >Firma Comision</h4>
     <table class="table table-striped table-bordered">
         <tr> 
-          <td> {{$evaluacion->comision_id->}} </td>
+          <td> {{$evaluacion->comision_id}} </td>
           <td> 
               {{$evaluacion->nombre}}
           </td>
