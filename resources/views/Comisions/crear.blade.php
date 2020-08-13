@@ -1,6 +1,6 @@
 <script src="https://kit.fontawesome.com/eccfd43738.js" crossorigin="anonymous"></script>
 
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('content')
 

@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+Route::get('/Bienvenido', function(){
+    return view("inicio");
+});
 //Rutas para facultad
 
 
@@ -25,6 +28,7 @@ Route::resource('Departamento', 'DepartamentoController');
 Route::resource('Academico', 'AcademicoController');
 Route::resource('Evaluacion', 'EvaluacionController');
 Route::resource('Comisions', 'ComisionsController');
+
 
 Route::get('Evaluacion/create/{id_Academico}', [
     'as' => 'Evaluacion',
@@ -45,4 +49,5 @@ Route::get('/facultad', function () {
 Auth::routes(['reset'=>false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 //

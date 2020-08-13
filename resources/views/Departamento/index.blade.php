@@ -4,7 +4,7 @@
         justify-content: center !important;
     }
  </style>
-@extends('layouts.app')
+@extends('layouts.app2')
 @section('content')
 
 <div class="container">

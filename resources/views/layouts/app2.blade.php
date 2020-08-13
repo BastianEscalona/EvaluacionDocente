@@ -28,7 +28,7 @@
         <nav class="navbar navbar-expand-md navbar-dark shadow-sm" style="background-color: #202355;">
             <div class="container">
                 <a class="navbar-brand" href="">
-                    Universidad Catolica del Maule
+                    Evaluación Docente
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -36,7 +36,41 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">                        
+                    <ul class="navbar-nav mr-auto">
+
+                       @if(@Auth::user()->hasRole('admin'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('Facultad.index') }}">{{ __('Facultad') }}</a>
+                        </li>
+                       <li class="nav-item">
+                               <a class="nav-link" href="{{ route('Departamento.index') }}">{{ __('Departamento') }}</a>
+                        </li>
+                        <li class="nav-item">
+                               <a class="nav-link" href="{{ route('Academico.index') }}">{{ __('Academico') }}</a>
+                        </li>
+                        <li class="nav-item">
+
+                         <li class="nav-item">
+                               <a class="nav-link" href="{{ route('Comisions.index') }}">{{ __('Comision') }}</a>
+                        
+                        </li>
+                               <a class="nav-link" href="{{ route('Evaluacion.index') }}">{{ __('Evaluacion') }}</a>
+                        </li>
+                        @endif
+                       @if(@Auth::user()->hasRole('secre'))
+                       <li class="nav-item">
+                               <a class="nav-link" href="{{ route('Academico.index') }}">{{ __('Academico') }}</a>
+                        </li>
+                        <li class="nav-item">
+
+                         <li class="nav-item">
+                               <a class="nav-link" href="{{ route('Comisions.index') }}">{{ __('Comision') }}</a>
+                        
+                        </li>
+                               <a class="nav-link" href="{{ route('Evaluacion.index') }}">{{ __('Evaluacion') }}</a>
+                        </li>
+                        @endif 
+                                                        
                     </ul>
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">

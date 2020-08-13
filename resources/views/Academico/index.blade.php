@@ -4,7 +4,7 @@
         justify-content: center !important;
     }
  </style>
-@extends('layouts.app')
+@extends('layouts.app2')
 @section('content')
 
 <div class="container">
@@ -15,6 +15,7 @@
 }}
     </div>
 @endif
+
 
 <a class="btn btn-success" href ="{{url('Academico/create')}}" > <i class="fas fa-user-plus" style="font-size: 24px;" ></i>   </a> 
 </br>
