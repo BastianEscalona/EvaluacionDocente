@@ -179,20 +179,21 @@ class EvaluacionController extends Controller
 
         return $pdf->download('archivo.pdf');
 
-        #return redirect('Evaluacion') -> with('Mensaje', 'Se ha generado PDF');
  
     }
 
     public function downloadexcel()
     {
-        return redirect('Evaluacion')->with('Mensaje', 'Evaluacion Eliminada');
+        return view('Evaluacion.export');
+        
+        
         #$evaluacion = Evaluacion::get();
         #$departamento = Departamento::get();
         #$academico = Academico::get();
         #$facultad = Facultad::get();
         #$excel = view('Evaluacion.export', compact( 'evaluacion'));
         #return view('Evaluacion.export', compact( 'evaluacion'));
-        #return Excel::download($excel, 'RESUMEN CALIFICACION.xls');
+        return Excel::download(new EvaluacionExport, 'RESUMEN CALIFICACION.xls');
         #return (new EvaluacionExport)->download('RESUMEN CALIFICACION.xls');
     }
 }

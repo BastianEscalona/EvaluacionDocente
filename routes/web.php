@@ -20,7 +20,10 @@ Route::get('/Bienvenido', function(){
     return view("inicio");
 });
 //Rutas para facultad
-
+Route::get('Evaluacion/downloadexcel', [
+    'as' => 'Evaluacion',
+    'uses' => 'EvaluacionController@downloadexcel',
+]);
 
 Route::resource('Facultad', 'FacultadController');
 Route::resource('Departamento', 'DepartamentoController');
@@ -38,10 +41,7 @@ Route::get('Evaluacion/download/{id_Academico}', [
     'uses' => 'EvaluacionController@download',
 ]);
 
-Route::get('Evaluacion/downloadexcel', [
-    'as' => 'Evaluacion',
-    'uses' => 'EvaluacionController@downloadexcel',
-]);
+
 
 /* Route::get('/facultad/editar', function () {
     return view('Facultad.editar');
