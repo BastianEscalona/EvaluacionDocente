@@ -8,6 +8,9 @@ use App\Departamento;
 use App\Academico;
 use App\Facultad;
 
+use App\Exports\EvaluacionExport;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 class EvaluacionController extends Controller
 {
@@ -178,5 +181,18 @@ class EvaluacionController extends Controller
 
         #return redirect('Evaluacion') -> with('Mensaje', 'Se ha generado PDF');
  
+    }
+
+    public function downloadexcel()
+    {
+        return redirect('Evaluacion')->with('Mensaje', 'Evaluacion Eliminada');
+        #$evaluacion = Evaluacion::get();
+        #$departamento = Departamento::get();
+        #$academico = Academico::get();
+        #$facultad = Facultad::get();
+        #$excel = view('Evaluacion.export', compact( 'evaluacion'));
+        #return view('Evaluacion.export', compact( 'evaluacion'));
+        #return Excel::download($excel, 'RESUMEN CALIFICACION.xls');
+        #return (new EvaluacionExport)->download('RESUMEN CALIFICACION.xls');
     }
 }

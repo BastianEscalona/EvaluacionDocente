@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,6 +37,12 @@ Route::get('Evaluacion/download/{id_Academico}', [
     'as' => 'Evaluacion',
     'uses' => 'EvaluacionController@download',
 ]);
+
+Route::get('Evaluacion/downloadexcel', [
+    'as' => 'Evaluacion',
+    'uses' => 'EvaluacionController@downloadexcel',
+]);
+
 /* Route::get('/facultad/editar', function () {
     return view('Facultad.editar');
 });

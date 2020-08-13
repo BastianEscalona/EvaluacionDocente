@@ -12,6 +12,8 @@
   <a class="btn btn-link" href="{{url('Bienvenido')}}">
     <i class="fas fa-home" style="font-size: 48px;"></i>
   </a>
+  <a class="btn btn-link" href ="{{url('Evaluacion/downloadexcel')}}" >  <i class="far fa-file-excel" style="font-size: 36px;color:orange"></i>   </a> 
+
 
 @if(Session::has('Mensaje'))
     <div class="alert alert-success" role="alert">
