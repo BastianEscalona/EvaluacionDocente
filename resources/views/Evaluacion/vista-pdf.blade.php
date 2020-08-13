@@ -49,7 +49,7 @@
 
         <tr>
           <td>{{$evaluacion->categoria}}</td>
-          <td>{$evaluacion->gradoAcademico}}</td>
+          <td>{{$evaluacion->gradoAcademico}}</td>
         </tr>
         <tr>
           <td>Categoria</td>
