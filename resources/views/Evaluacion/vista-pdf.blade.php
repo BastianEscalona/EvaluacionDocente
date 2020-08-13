@@ -4,10 +4,10 @@
     <title>EVALUACION DOCENTE</title>
   </head>
   <body>
-      <h1>EVALUACION DOCENTE</h1>
+      <h5 align="center" >PAUTA RESUMEN</h5>
     <div class="Identificacion">
-      <h4>IDENTIFICACION</h4>
-      <table class="table table-striped table-bordered">
+      <h6>I. IDENTIFICACIÓN:</h6>
+      <table class="table table-striped table-bordered table-sm">
         <tr> 
           <td> {{$evaluacion->nombre}} </td>
           <td> 
@@ -30,7 +30,8 @@
               @endif
             @endforeach
           </td>
-          <td>          
+          <td> 
+            {{$evaluacion->fechainicio}} 
           </td>
         </tr>
         <tr>
@@ -68,8 +69,8 @@
     </div>
 
     <div class="Calificacion">
-      <h4>CALIFICACION ACADEMICA</h4>
-      <table class="table table-striped table-bordered">
+      <h6>II. CALIFICACION ACADEMICA:</h6>
+      <table class="table table-striped table-bordered table-sm">
         <tr>
           <td></td>
           <td>% de tiempo asignado a tareas programadas</td>
@@ -87,7 +88,7 @@
           <td>T*C/100</td>
         </tr>
         <tr class="nota1">
-          <td>Actividades de Docencia</td>
+          <td>1. Actividades de Docencia</td>
           <td>{{$evaluacion->t1}}</td>
           <td>
             @if ($evaluacion->nota1 >= 4.5)
@@ -118,7 +119,7 @@
           
         </tr>
         <tr class="nota2">
-          <td>Actividades de Docencia</td>
+          <td>2. Actividades de Investigación</td>
           <td>{{$evaluacion->t2}}</td>
           <td>
             @if ($evaluacion->nota2 >= 4.5)
@@ -149,7 +150,7 @@
 
         </tr>
         <tr class="nota3">
-          <td>Actividades de Docencia</td>
+          <td>3. Extensión y Vinculación</td>
           <td>{{$evaluacion->t3}}</td>
           <td>
             @if ($evaluacion->nota3 >= 4.5)
@@ -180,7 +181,7 @@
 
         </tr>
         <tr class="nota4">
-          <td>Actividades de Docencia</td>
+          <td>4. Administración Académica</td>
           <td>{{$evaluacion->t4}}</td>
           <td>
             @if ($evaluacion->nota4 >= 4.5)
@@ -211,7 +212,7 @@
 
         </tr>
         <tr class="nota5">
-          <td>Actividades de Docencia</td>
+          <td>5. Otras Actividades Realizadas</td>
           <td>{{$evaluacion->t5}}</td>
           <td>
             @if ($evaluacion->nota5 >= 4.5)
@@ -241,75 +242,63 @@
           <td> {{$evaluacion->t5 * $evaluacion->nota5 /100}}</td>
 
         </tr>
+        <tr>
+        <td >Calificacion Final</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>@if($evaluacion->notafinal < 2.7)
+            Deficiente
+            @elseif($evaluacion->notafinal > 2.6 && $evaluacion->notafinal < 3.5)
+            Regular
+            @elseif($evaluacion->notafinal > 3.4 && $evaluacion->notafinal < 4.0)
+            Bueno
+            @elseif($evaluacion->notafinal > 3.9 && $evaluacion->notafinal < 4.5)
+            Muy Bueno
+            @elseif($evaluacion->notafinal > 4.4 && $evaluacion->notafinal < 5.0)
+            Excelente
+            @endif
+        </td>
+        <td>{{$evaluacion->notafinal}} </td>
+      </tr>
       </table>
 
+    </div>
+    <div class="Escala">
+      <h4>III. Escala Evaluativa:</h4>
+      <table border="3" style="margin: 0 auto;">
+        <tr>
+        <td>          <label>Escala: Exelente = 4.5 a 5     Muy Bueno = 4.0 a 4.4       Bueno= 3.5 a 3.9</label> </td>
+        </tr>
+        <tr>
+        <td>          <label>        Regular = 3.4 a 2.7       Deficiente = menos de 2.7</label> </td> 
+        </tr>
+      </table>
+    </div>
+    <div class="Escala">
+      <h4>IV. Argumentos de la calificación</h4>
+      <table class="table table-striped table-bordered table-sm">
+        <td> {{$evaluacion->argumento}}  </td>
+      </table>
+    </div>
+    <div>
+    <h4 align="center" >Firma Comision</h4>
+    <table class="table table-striped table-bordered table-sm">
+        <tr> 
+          <td> {{$evaluacion->comision_id}} </td>
+          <td> 
+              {{$evaluacion->comision_id}}
+          </td>
+          <td> {{$evaluacion->comision_id}} </td>
+        </tr>
+        <tr>
+          <td>Comisionado 1</td>
+          <td>Comisionado 2</td>
+          <td>Comisionado 3</td>
+        </tr>
     </div>
   </body>
 </html>
-<!--
-    
 
-      <tr>
-        <td>Actividades de Docencia</td>
-        <td> {{$evaluacion->t1}}  </td>
-        <td> {{$evaluacion->nota1}} </td>
-        <td></td>
-        <td> {{$evaluacion->t1 * $evaluacion->nota1 /100}}</td>
-      </tr>
-
-      <tr>
-        <td>Actividades de Docencia</td>
-        <td> {{$evaluacion->t2}}  </td>
-        <td> {{$evaluacion->nota2}}  </td>
-        <td></td>
-        <td>{{$evaluacion->t2 * $evaluacion->nota2 /100}} </td>
-      </tr>
-
-      <tr>
-        <td>Extencion Y Vinculacion</td>
-        <td> {{$evaluacion->t3}} </td>
-        <td> {{$evaluacion->nota3}} </td>
-        <td></td>
-        <td>{{$evaluacion->t3* $evaluacion->nota3 /100}}</td>
-      </tr>
-
-      <tr>
-        <td>Administracion Academica</td>
-        <td> {{$evaluacion->t4}}  </td>
-        <td> {{$evaluacion->nota4}} </td>
-        <td></td>
-        <td>{{$evaluacion->t4 * $evaluacion->nota4 /100}}</td>
-      </tr>
-
-      <tr>
-        <td>Otras Actividades Realizadas</td>
-        <td> {{$evaluacion->t5}} </td>
-        <td> {{$evaluacion->nota5}} </td>
-        <td></td>
-        <td>{{$evaluacion->t5 * $evaluacion->nota5 /100}} </td>
-      </tr>
-
-      <tr>
-        <td colspan="3">Calificacion Final</td>
-        <td><label for="" id="escalafinal"></label></td>
-        <td> </td>
-      </tr>
-      
-      </table>
-    
-    </div>
-
-    <div>
-      <h4>Escala Evaluativa</h4>
-      <label>Escala: Exelente = 4.5 a 5     Muy Bueno = 4.0 a 4.4       Bueno= 3.5 a 3.9</label>
-      <label>        Regular = 3.4 a 2.7       Deficiente = menos de 2.7</label>
-    </div>
-
-    <div>
-      <h4>ARGUMENTO DE LA CALIFICACION FINAL</h4>
-      <textarea id="argumento" name="argumento" rows="4" cols="50">
-      </textarea>
-    </div>
-
-  
-</div-->
