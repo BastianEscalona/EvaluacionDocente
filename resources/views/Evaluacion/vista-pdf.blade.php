@@ -245,11 +245,7 @@
         <tr>
         <td >Calificacion Final</td>
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>@if($evaluacion->notafinal < 2.7)
+        <td colspan="5">@if($evaluacion->notafinal < 2.7)
             Deficiente
             @elseif($evaluacion->notafinal > 2.6 && $evaluacion->notafinal < 3.5)
             Regular
