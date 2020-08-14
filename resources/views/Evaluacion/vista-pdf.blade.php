@@ -284,7 +284,7 @@
     <table class="table table-striped table-bordered table-sm">
         <tr> 
           @forelse ($comisionados as $comisionado)
-            <td> {{$comisionado->nombre}} </td>
+            <td> {{$comisionado->nombre}} {{$comisionado->apellido}} </td>
           @empty
             <td>No hay comisionado</td>
             <td>No hay comisionado</td>
