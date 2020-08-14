@@ -193,7 +193,7 @@ class EvaluacionController extends Controller
         
         $evaluaciones = Evaluacion::get();
         
-        return view('Evaluacion.export', compact( 'evaluaciones'));
+        #return view('Evaluacion.export', compact( 'evaluaciones'));
 
         return Excel::download(new EvaluacionExport, 'RESUMEN CALIFICACION.xls');
     }
