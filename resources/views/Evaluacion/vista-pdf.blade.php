@@ -283,11 +283,13 @@
     <h4 align="center" >Firma Comision</h4>
     <table class="table table-striped table-bordered table-sm">
         <tr> 
-          <td> {{$evaluacion->comision_id}} </td>
-          <td> 
-              {{$evaluacion->comision_id}}
-          </td>
-          <td> {{$evaluacion->comision_id}} </td>
+          @forelse ($comisionados as $comisionado)
+            <td> {{$comisionado->nombre}} </td>
+          @empty
+            <td>No hay comisionado</td>
+            <td>No hay comisionado</td>
+            <td>No hay comisionado</td>
+          @endforelse
         </tr>
         <tr>
           <td>Comisionado 1</td>

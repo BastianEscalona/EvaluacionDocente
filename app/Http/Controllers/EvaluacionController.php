@@ -10,6 +10,8 @@ use App\Facultad;
 
 use App\Exports\EvaluacionExport;
 use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\DB;
+
 
 
 class EvaluacionController extends Controller
@@ -173,9 +175,13 @@ class EvaluacionController extends Controller
         $evaluacion = Evaluacion::where('academico_id', $id_Academico)->first();
         $academico = Academico::find($evaluacion->academico_id);
         $facultades = Facultad::all();
+        $acade_comi = DB::table('academico_comision')->where('comision_id', $evaluacion->comision_id )->get();
+        $comisionados = collect();
+        foreach ($acade_comi as $acaComi) {
+            $comisionados->add(Academico::find($acaComi->academico_id));
+        }
 
-
-        $pdf = \PDF::loadView('Evaluacion.vista-pdf', compact('evaluacion','departamentos', 'academico', 'facultades'));
+        $pdf = \PDF::loadView('Evaluacion.vista-pdf', compact('evaluacion','departamentos', 'academico', 'facultades', 'comisionados'));
 
         return $pdf->download('archivo.pdf');
  
@@ -191,8 +197,6 @@ class EvaluacionController extends Controller
         #$academico = Academico::get();
         #$facultad = Facultad::get();
         #$excel = view('Evaluacion.export', compact( 'evaluacion'));
-        #return view('Evaluacion.export', compact( 'evaluacion'));
         return Excel::download(new EvaluacionExport, 'RESUMEN CALIFICACION.xls');
-        #return (new EvaluacionExport)->download('RESUMEN CALIFICACION.xls');
     }
 }
