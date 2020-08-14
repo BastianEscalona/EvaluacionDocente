@@ -189,14 +189,12 @@ class EvaluacionController extends Controller
 
     public function downloadexcel()
     {
-        return view('Evaluacion.export');
         
         
-        #$evaluacion = Evaluacion::get();
-        #$departamento = Departamento::get();
-        #$academico = Academico::get();
-        #$facultad = Facultad::get();
-        #$excel = view('Evaluacion.export', compact( 'evaluacion'));
+        $evaluaciones = Evaluacion::get();
+        
+        return view('Evaluacion.export', compact( 'evaluaciones'));
+
         return Excel::download(new EvaluacionExport, 'RESUMEN CALIFICACION.xls');
     }
 }
