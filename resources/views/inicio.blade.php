@@ -106,7 +106,7 @@
 			<div class="contenido-card">
 				<h3>Comision</h3>
 				<p>La Comision esta compuesta por 3 Docentes encargados de realizar la Evaluacion de los Academicos</p>
-				<a href="{{ route('AsignarComision.index') }}">Ver Comisión</a> // Rediriguir a vista de la comision con los academicos que pertenezcan a ella.
+				<a href="{{ route('AsignarComision.index') }}">Ver Comisión </a> 
 			</div>
 		</div>
 		<div class="card">
