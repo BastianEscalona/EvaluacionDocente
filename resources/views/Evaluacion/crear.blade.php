@@ -44,10 +44,13 @@
             @foreach ($facultades as $facultad)
               @if ($departamento->facultad_id == $facultad->id)
                 {{$facultad->Nombre}}
+                <input type="hidden" name="nombreFacultad" id="nombreFacultad" value="{{$facultad->Nombre}}">
+
               @endif
             @endforeach
           </td>
-          <td>          
+          <td> 
+            Primer Semestre 2020          
           </td>
         </tr>
         <tr>

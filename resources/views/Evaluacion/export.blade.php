@@ -16,7 +16,7 @@
             <td rowspan="2" style="background-color: #ffff99;">Categoria</td>
             <td rowspan="2" style="background-color: #ffff99;">Nombre</td>
             <td rowspan="2" style="background-color: #ffff99;">Calificacion Anterior (nota)</td>
-            <td colspan="2" style="background-color: #ffff99;"> Actividades de docencia</td>
+            <td colspan="2" style="background-color: #ffff99;">Actividades de docencia</td>
             <td colspan="2" style="background-color: #ffff99;">Actividades de Investigacion</td>
             <td colspan="2" style="background-color: #ffff99;">Extension y Vinculacion</td>
             <td colspan="2" style="background-color: #ffff99;">Administracion Academica</td>
@@ -41,7 +41,7 @@
 
         @foreach ($evaluaciones as $evaluacion )
             <tr>
-                <td> {{$evaluacion->argumento}}</td>
+                <td> {{$evaluacion->nombreFacultad}}</td>
                 <td> {{$evaluacion->categoria}} </td>
                 <td> {{$evaluacion->nombre}} </td>
                 <td> {{$evaluacion->calificacionanterior}} </td>
