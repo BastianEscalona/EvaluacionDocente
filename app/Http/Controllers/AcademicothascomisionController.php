@@ -12,10 +12,13 @@ class AcademicothascomisionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        
-        return view('AsignarComision/index');
+        $request->user()->authorizeRoles(['admin','secre']);
+        $comisions = Comisions::all();
+        $comisions = Comisions::paginate(7);
+        $academicos = Academico::all();
+        return view('AsignarComision.index',compact('comisions','academicos'));
     }
 
     /**
@@ -25,7 +28,9 @@ class AcademicothascomisionController extends Controller
      */
     public function create()
     {
-        return view('AsignarComision/crear');
+        $comisions = Comisions::all();
+        $academicos = Academico::all();
+        return view('AsignarComision.crear',compact('comisions','academicos'));
     }
 
     /**
@@ -58,7 +63,9 @@ class AcademicothascomisionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comisions = Comisions::all();
+        $academicos = Academico::find($id);
+        return view('AsignarComision.editar', compact('departamento', 'facultads'));
     }
 
     /**
@@ -70,7 +77,10 @@ class AcademicothascomisionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $comisions = Comisions::find($id);
+        $comisions->comision_id = request('comision_id');
+        $comisions->save();
+        return redirect('AsignarComision')->with('Mensaje','Comision Modificado con exito');
     }
 
     /**
@@ -81,6 +91,9 @@ class AcademicothascomisionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $comisions = Comisions::findOrfail($id);
+        $comisions -> delete();
+
+        return redirect('AsignarComision')->with('Mensaje','Comision Eliminado');
     }
 }
