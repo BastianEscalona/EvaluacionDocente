@@ -23,6 +23,7 @@ class CreateEvaluacionsTable extends Migration
             $table->string('titulo');
             $table->string('gradoAcademico');
             $table->string('categoria');
+            $table->string('nombreFacultad');
             $table->integer('HorasContrato');
             $table->string('calificacionanterior');
             $table->string('tipoplanta');

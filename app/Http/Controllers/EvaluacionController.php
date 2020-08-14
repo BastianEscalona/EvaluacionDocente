@@ -140,6 +140,7 @@ class EvaluacionController extends Controller
         $evaluaciones->t3 = request('t3');
         $evaluaciones->t4 = request('t4');
         $evaluaciones->t5 = request('t5');
+        $evaluaciones->nombreFacultad = request('nombreFacultad');
         $evaluaciones->nota1 = request('nota1');
         $evaluaciones->nota2 = request('nota2');
         $evaluaciones->nota3 = request('nota3');
