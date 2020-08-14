@@ -320,7 +320,7 @@ class AcademicoSeeder extends Seeder
 
 
         $academico=new Academico();
-        $academico ->rut='11.111.111-1';
+        $academico ->rut='11.222.222-2';
         $academico->titulo='Doctor en Filosofia';
         $academico->gradoAcademico='Doctor';
         $academico->categoria='Full';

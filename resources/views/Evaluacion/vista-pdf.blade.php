@@ -273,6 +273,7 @@
         </tr>
       </table>
     </div>
+    <br>
     <div class="Escala">
       <h4>IV. Argumentos de la calificación</h4>
       <table class="table table-striped table-bordered table-sm">

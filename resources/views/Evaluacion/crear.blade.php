@@ -179,7 +179,7 @@
       <label>Escala: Exelente = 4.5 a 5     Muy Bueno = 4.0 a 4.4       Bueno= 3.5 a 3.9</label>
       <label>        Regular = 3.4 a 2.7       Deficiente = menos de 2.7</label>
     </div>
-
+  <td> </td>
     <div>
       <h4>ARGUMENTO DE LA CALIFICACION FINAL</h4>
       <textarea id="argumento" name="argumento" rows="4" cols="50">

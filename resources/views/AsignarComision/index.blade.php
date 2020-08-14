@@ -37,16 +37,9 @@
         
 
         <tbody>
-            @foreach ($comisions as $comision)
-            <tr>
-                <td>{{$loop->iteration}}</td>
-                <td>{{$comision->nombre}}</td>
-                <td> @foreach ($academicos as $academico)
-                    @if ($comision->comision_id == $comision->id)
-                        {{$comision->Nombre}}
-                    @endif
-                @endforeach
-                </td>
+           <tr>  @foreach ($academicos->comisions as $comision)
+                   {{$comisions->pivot->comision_id}}
+
                 <td>
                 
                     <form method="POST" action="/AsignarComision/{{$comision->id}}" style="display:inline">
@@ -55,7 +48,9 @@
                     <button class="btn btn-link" type="submit" onclick="return confirm('Esta Seguro de Borrar?');" ><i class="fas fa-trash-alt" style="font-size: 24px;color:red" ></i>  </button>
                     </form>
                 </td>
+                       
             </tr>
+
             @endforeach
             </tbody>
         </table>

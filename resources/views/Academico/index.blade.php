@@ -76,8 +76,8 @@
                     <a class="btn btn-link" href="{{url('Evaluacion/create', $id_Academico=$academico->id)}}" > <i class="far fa-address-card" style="font-size: 36px;color:green" > </i>  </a>                        
                 </td>  
 
+
                 <td>
-               
                 <a class="btn btn-link" href ="{{url('Evaluacion/download', $id_Academico=$academico->id)}}" >  <i class="far fa-file-pdf" style="font-size: 36px;color:orange"></i>   </a> 
                 </td>
 

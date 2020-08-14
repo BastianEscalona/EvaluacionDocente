@@ -15,6 +15,7 @@ class AcademicothascomisionController extends Controller
     public function index(Request $request)
     {
         $request->user()->authorizeRoles(['admin','secre']);
+        $comi_aca = 
         $comisions = Comisions::all();
         $comisions = Comisions::paginate(7);
         $academicos = Academico::all();
