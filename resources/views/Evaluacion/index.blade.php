@@ -49,7 +49,8 @@
 
                 <td>
                     <a class="btn btn-link" href="{{ url('/Evaluacion/'.$evaluacion->id.'/edit') }}" > <i class="fas fa-pencil-alt" style="font-size: 24px;" > </i>  </a>
-                
+                    <a class="btn btn-link" href ="{{url('Evaluacion/download', $id=$evaluacion->id)}}" >  <i class="far fa-file-pdf" style="font-size: 36px;color:orange"></i>   </a> 
+
                     <form method="POST" action="/Evaluacion/{{$evaluacion->id}}" style="display:inline">
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}

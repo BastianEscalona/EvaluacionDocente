@@ -36,7 +36,7 @@ Route::get('Evaluacion/create/{id_Academico}', [
     'as' => 'Evaluacion',
     'uses' => 'EvaluacionController@create',
 ]);
-Route::get('Evaluacion/download/{id_Academico}', [
+Route::get('Evaluacion/download/{id}', [
     'as' => 'Evaluacion',
     'uses' => 'EvaluacionController@download',
 ]);

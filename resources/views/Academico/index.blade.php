@@ -77,9 +77,6 @@
                 </td>  
 
 
-                <td>
-                <a class="btn btn-link" href ="{{url('Evaluacion/download', $id_Academico=$academico->id)}}" >  <i class="far fa-file-pdf" style="font-size: 36px;color:orange"></i>   </a> 
-                </td>
 
                 <td>
                     <a class="btn btn-link" href="{{ url('/Academico/'.$academico->id.'/edit') }}" > <i class="fas fa-pencil-alt" style="font-size: 24px;" > </i>  </a>

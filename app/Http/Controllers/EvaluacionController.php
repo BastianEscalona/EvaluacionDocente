@@ -171,10 +171,10 @@ class EvaluacionController extends Controller
         return redirect('Evaluacion')->with('Mensaje', 'Evaluacion Eliminada');
     }
 
-    public function download($id_Academico)
+    public function download($id)
     {
         $departamentos = Departamento::all();
-        $evaluacion = Evaluacion::where('academico_id', $id_Academico)->first();
+        $evaluacion = Evaluacion::find($id);
         $academico = Academico::find($evaluacion->academico_id);
         $facultades = Facultad::all();
         $acade_comi = DB::table('academico_comision')->where('comision_id', $evaluacion->comision_id )->get();
